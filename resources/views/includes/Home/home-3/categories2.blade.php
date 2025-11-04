@@ -1,0 +1,37 @@
+@php
+$categories = [
+    [
+        'img' => 'assets/img/fashion.png',
+        'title' => "Men's Wear",
+    ],
+    [
+        'img' => 'assets/img/tshirt.png',
+        'title' => "Kid's Wear",
+    ],
+    [
+        'img' => 'assets/img/accessories.png',
+        'title' => "Accessories",
+    ],
+    [
+        'img' => 'assets/img/sneakers.png',
+        'title' => "Men's Shoes",
+    ],
+    [
+        'img' => 'assets/img/television.png',
+        'title' => "Television",
+    ],
+    [
+        'img' => 'assets/img/pant.png',
+        'title' => "Men's Pants",
+    ]
+];
+@endphp
+
+@foreach ($categories as $item)
+<div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+    <div class="cats_side_wrap text-center mx-auto mb-3">
+        <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="{{ asset($item['img']) }}" class="img-fluid" width="40" alt=""></a></div></div>
+        <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">{{ $item['title'] }}</a></h6></div>
+    </div>
+</div>
+@endforeach

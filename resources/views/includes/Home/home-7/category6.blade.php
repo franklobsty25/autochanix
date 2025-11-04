@@ -1,0 +1,37 @@
+@php
+$categorys = [
+    [
+        'img' => 'assets/img/b-3.png',
+        'title' => "Kid's Wear",
+        'items' => '8562 Items',
+        'btn' => 'Browse Items',
+    ],
+    [
+        'img' => 'assets/img/b-5.png',
+        'title' => "Men's Wear",
+        'items' => '32 Items',
+        'btn' => 'Browse Items',
+    ]
+];
+@endphp
+
+@foreach ($categorys as $item)
+    <div class="row no-gutters">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="single_cats">
+                <a href="#" class="cards card-overflow card-scale md_height">
+                    <div class="bg-image" style="background:url({{ asset($item['img']) }})no-repeat;"></div>
+                    <div class="ct_body">
+                        <div class="ct_body_caption left">	
+                            <h2 class="m-0 ft-bold lh-1 fs-md text-upper">{{ $item['title'] }}</h2>
+                            <span>{{ $item['items'] }}</span>
+                        </div>
+                        <div class="ct_footer left">
+                            <span class="btn stretched-links borders">{{ $item['btn'] }} <i class="lni lni-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+@endforeach

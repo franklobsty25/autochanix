@@ -1,0 +1,63 @@
+@php
+$orders = [
+    [
+        'img' => 'assets/img/product/2.jpg',
+        'name' => 'Dresses',
+        'title' => 'Women Striped Shirt Dress',
+        'size' => 'Size: 36',
+        'color' => 'Color: Red',
+        'price' => 130,
+        'status' => 'Completed',
+        'style' => 'text-warning bg-light-warning',
+        'date' => '22 May 2025',
+    ],
+    [
+        'img' => 'assets/img/product/8.jpg',
+        'name' => 'Boys',
+        'title' => 'Boys Solid Sweatshirt',
+        'size' => 'Size: 36',
+        'color' => 'Color: Red',
+        'price' => 140,
+        'status' => 'Completed',
+        'style' => 'text-success bg-light-success',
+        'date' => '31 May 2025',
+    ],
+    [
+        'img' => 'assets/img/product/1.jpg',
+        'name' => "Men's",
+        'title' => 'Printed Straight Kurta',
+        'size' => 'Size: 36',
+        'color' => 'Color: Red',
+        'price' => 230,
+        'status' => 'Canceled',
+        'style' => 'text-danger bg-light-danger',
+        'date' => '22 September 2025',
+    ]
+];
+@endphp
+
+@foreach ($orders as $item)
+    <div class="row align-items-center justify-content-center m-0 py-4 br-bottom">
+        <div class="col-xl-5 col-lg-5 col-md-5 col-12">
+            <div class="cart_single d-flex align-items-start mfliud-bot">
+                <div class="cart_selected_single_thumb">
+                    <a href="#"><img src="{{ asset($item['img']) }}" width="75" class="img-fluid rounded" alt=""></a>
+                </div>
+                <div class="cart_single_caption text-start ps-3">
+                    <p class="mb-0"><span class="text-muted small">{{ $item['name'] }}</span></p>
+                    <h4 class="product_title fs-sm ft-medium mb-1 lh-1">{{ $item['title'] }}</h4>
+                    <p class="mb-2"><span class="text-dark medium">{{ $item['size'] }}</span>, <span class="text-dark medium">{{ $item['color'] }}</span></p>
+                    <h4 class="fs-sm ft-bold mb-0 lh-1">${{ $item['price'] }}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-6 text-start">
+            <p class="mb-1 p-0"><span class="text-muted">Status</span></p>
+            <div class="delv_status"><span class="ft-medium small {{ $item['style'] }} rounded px-3 py-1">{{ $item['status'] }}</span></div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-6 text-start">
+            <p class="mb-1 p-0"><span class="text-muted">Expected date by:</span></p>
+            <h6 class="mb-0 ft-medium fs-sm">{{ $item['date'] }}</h6>
+        </div>
+    </div>
+@endforeach

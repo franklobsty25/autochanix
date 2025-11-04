@@ -55,7 +55,7 @@
 
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 text-center">
-				<a href="" class="btn stretched-links borders m-auto"><i class="lni lni-reload me-2"></i>Load More</a>
+				<a href="#" class="btn stretched-links borders m-auto"><i class="lni lni-reload me-2"></i>Load More</a>
 			</div>
 		</div>
 

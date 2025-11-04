@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\RoleEnum;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Seeder;
@@ -15,12 +16,7 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $roles = [
-            'Admin',
-            'User',
-            'Manager',
-            'Team Lead',
-        ];
+        $roles = array_column(RoleEnum::cases(), 'value');
 
         foreach ($roles as $role) {
             $createRole = Role::create(['name' => $role]);
@@ -34,10 +30,24 @@ class RoleSeeder extends Seeder
     protected function getPermission($role): Collection
     {
         return match ($role) {
-            'Admin' => Permission::all(),
-            'User' => Permission::where('name', '=', 'roles.index')->orWhere('name', '=', 'products.index')->orWhere('name', '=', 'products.create')->get(),
-            'Manager' => Permission::where('name', '=', 'roles.index')->orWhere('name', '=', 'products.index')->orWhere('name', '=', 'products.create')->orWhere('name', '=', 'products.edit')->orWhere('name', '=', 'products.delete')->get(),
-            'Team Lead' => Permission::where('name', '=', 'roles.index')->orWhere('name', '=', 'roles.create')->orWhere('name', '=', 'products.index')->orWhere('name', '=', 'products.create')->orWhere('name', '=', 'products.edit')->orWhere('name', '=', 'products.delete')->get(),
+            RoleEnum::Admin->value => Permission::all(),
+            RoleEnum::User->value => Permission::where('name', '=', 'roles.index')
+                ->orWhere('name', '=', 'products.index')
+                ->orWhere('name', '=', 'products.create')
+                ->get(),
+            RoleEnum::Manager->value => Permission::where('name', '=', 'roles.index')
+                ->orWhere('name', '=', 'products.index')
+                ->orWhere('name', '=', 'products.create')
+                ->orWhere('name', '=', 'products.edit')
+                ->orWhere('name', '=', 'products.delete')
+                ->get(),
+            RoleEnum::TeamLead->value => Permission::where('name', '=', 'roles.index')
+                ->orWhere('name', '=', 'roles.create')
+                ->orWhere('name', '=', 'products.index')
+                ->orWhere('name', '=', 'products.create')
+                ->orWhere('name', '=', 'products.edit')
+                ->orWhere('name', '=', 'products.delete')
+                ->get(),
         };
     }
 }

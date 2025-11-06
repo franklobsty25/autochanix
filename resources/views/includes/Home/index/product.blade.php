@@ -57,7 +57,9 @@ $products = [
                 <div class="shop_thumb position-relative">
                     <a class="card-img-top d-block overflow-hidden" href="/shop-details"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                        <div class="edlio"><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}" class="text-white fs-sm ft-medium quickview-btn"><i class="fas fa-eye me-1"></i>Quick View</a></div>
+                        <div class="edlio"><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}"
+                          class="text-white fs-sm ft-medium quickview-btn"><i class="fas fa-eye me-1"></i>Quick View</a>
+                        </div>
                     </div>
                 </div>
             </div>

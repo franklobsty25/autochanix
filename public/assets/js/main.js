@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.quickview-btn').forEach(button => {
         button.addEventListener('click', () => {
             const productId = button.dataset.productId;
-            fetchProduct(productId);
+            // fetchProduct(productId);
         });
     });
 });
 
 function fetchProduct(id) {
-    fetch(`/product/${id}`, {
+    fetch(`/product/${id}/edit`, {
         headers: { 'Accept': 'application/json' }
     })
     .then(async res => {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(err => console.error(`Subtotal/Total update failed:`, err));
     }
-    
+
     function updateSubtotal(fetchUrl = '/wishlist/subtotal') {
         fetch(fetchUrl)
             .then(res => res.json())

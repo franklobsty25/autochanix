@@ -13,7 +13,7 @@
         <div>
             <form class="mt-6 space-y-6" wire:submit="editProduct">
                 <flux:input label="Name" type="text" name="name" placeholder="Enter Name" wire:model="name" />
-                <flux:textarea label="Detail" name="detail" placelhoder="Enter Detail" wire:model="detail" />
+                <flux:textarea label="Description" name="description" placelhoder="Enter Description" wire:model="description" />
                 <flux:button type="submit" variant="primary">Edit Product</flux:button>
             </form>
         </div>

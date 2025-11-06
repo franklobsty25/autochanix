@@ -8,13 +8,13 @@ use Livewire\Component;
 
 class ProductEdit extends Component
 {
-    public $product, $name, $detail;
+    public $product, $name, $description;
 
     public function mount(Product $product): void
     {
         $this->product = $product;
         $this->name = $this->product->name;
-        $this->detail = $this->product->detail;
+        $this->description = $this->product->description;
     }
 
     public function render(): View
@@ -26,11 +26,11 @@ class ProductEdit extends Component
     {
         $this->validate([
             'name' => 'required',
-            'detail' => 'required',
+            'description' => 'required',
         ]);
 
         $this->product->name = $this->name;
-        $this->product->detail = $this->detail;
+        $this->product->description = $this->description;
 
         $this->product->save();
 

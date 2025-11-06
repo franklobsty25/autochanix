@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class ProductCreate extends Component
 {
-    public $name, $detail;
+    public $name, $description;
 
     public function render(): View
     {
@@ -19,12 +19,12 @@ class ProductCreate extends Component
     {
         $this->validate([
             'name' => 'required|string|max:255',
-            'detail' => 'required',
+            'description' => 'required',
         ]);
 
         Product::create([
             'name' => $this->name,
-            'detail' => $this->detail,
+            'description' => $this->description,
         ]);
 
         return to_route('products.index')->with('success', 'Product created successfully.');

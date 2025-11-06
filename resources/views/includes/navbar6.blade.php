@@ -117,10 +117,10 @@
 
                         <li class="relative parent-parent-menu-item">
                             <a href="javascript:void(0);" class="home-link">Diagnostics</a>
-                            <ul class="nav-dropdown nav-submenu">
-                                <li><a href="{{ url('/blog') }}" class="sub-menu-item">Vehicle health check info</a></li>
-                                <li><a href="{{ url('/blog-detail') }}" class="sub-menu-item">Fault code library</a></li>
-                            </ul>
+{{--                            <ul class="nav-dropdown nav-submenu">--}}
+{{--                                <li><a href="{{ url('/blog') }}" class="sub-menu-item">Vehicle health check info</a></li>--}}
+{{--                                <li><a href="{{ url('/blog-detail') }}" class="sub-menu-item">Fault code library</a></li>--}}
+{{--                            </ul>--}}
                         </li>
 
                         <li class="relative parent-parent-menu-item">

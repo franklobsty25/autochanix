@@ -115,13 +115,13 @@
 
                         <li><a href="{{ url('/shop') }}" class="sub-menu-item">Shop</a></li>
 
-                        <li class="relative parent-parent-menu-item">
-                            <a href="javascript:void(0);" class="home-link">Diagnostics</a>
+{{--                        <li class="relative parent-parent-menu-item">--}}
+{{--                            <a href="javascript:void(0);" class="home-link">Diagnostics</a>--}}
 {{--                            <ul class="nav-dropdown nav-submenu">--}}
 {{--                                <li><a href="{{ url('/blog') }}" class="sub-menu-item">Vehicle health check info</a></li>--}}
 {{--                                <li><a href="{{ url('/blog-detail') }}" class="sub-menu-item">Fault code library</a></li>--}}
 {{--                            </ul>--}}
-                        </li>
+{{--                        </li>--}}
 
                         <li class="relative parent-parent-menu-item">
                             <a href="javascript:void(0);" class="home-link">Support</a>
@@ -132,8 +132,6 @@
                                 <li><a href="{{ url('/faq') }}" class="sub-menu-item">FAQs</a></li>
                             </ul>
                         </li>
-
-                        <li><a href="{{ url('/docs') }}" class="sub-menu-item">About Us</a></li>
 
                     </ul>
                 </div>

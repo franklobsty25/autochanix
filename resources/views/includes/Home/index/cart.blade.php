@@ -38,27 +38,26 @@
                             </button>
                         </div>
                     </div>
-                
                     @endforeach
                 @else
                     <p class="px-3 py-3">Your cart is empty.</p>
                 @endif
             </div>
-            
+
             <div class="d-flex align-items-center justify-content-between br-top br-bottom px-3 py-3">
                 <h6 class="mb-0">Subtotal</h6>
                 <h3 class="mb-0 ft-medium cart-subtotal" id="cart-subtotal">${{ number_format($subtotal, 2) }}</h3>
             </div>
-            
+
             <div class="cart_action px-3 py-3">
                 <div class="form-group mb-3">
-                    <button type="button" class="btn d-block full-width btn-dark">Checkout Now</button>
+                    <button onclick="window.location.href='{{ url('/checkout') }}'" type="button" class="btn d-block full-width btn-dark">Checkout Now</button>
                 </div>
                 <div class="form-group">
-                    <button onclick="window.location.href='{{ url('/shoping-cart') }}'" class="btn d-block full-width btn-dark-light">Edit or View</button>
+                    <button onclick="window.location.href='{{ url('/checkout') }}'" class="btn d-block full-width btn-dark-light">Edit or View</button>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>

@@ -27,6 +27,31 @@ Route::get('/shop-details', function () {
     return view('frontend.shop-details');
 })->name('shop-details');
 
+Route::get('/about-us', function () {
+    return view('frontend.about-us');
+});
+Route::get('/contact', function () {
+    return view('frontend.contact');
+});
+Route::get('/privacy', function () {
+    return view('frontend.privacy');
+});
+Route::get('/faq', function () {
+    return view('frontend.faq');
+});
+
+Route::get('/checkout', function () {
+    return view('frontend.checkout');
+});
+
+Route::get('/complete-order', function () {
+    return view('frontend.complete-order');
+});
+
+Route::get('/docs', function () {
+    return view('shop-single-v4');
+});
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');

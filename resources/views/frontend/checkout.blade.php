@@ -5,7 +5,7 @@
 
 @section('content')
 
-@include('includes.navbar2')
+@include('includes.navbar6')
 
 <!-- Top Breadcrubms -->
 <div class="gray py-3">

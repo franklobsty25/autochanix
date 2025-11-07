@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 22,
-        'img' => 'assets/img/product/15.png', 
+        'img' => 'assets/img/product/15.png',
         'title' => 'Women Straight Pants',
         'tag' => 'Sale',
         'reviews' => '5 Reviews',
@@ -12,7 +12,7 @@ $products = [
     ],
     [
         'id' => 23,
-        'img' => 'assets/img/product/16.png', 
+        'img' => 'assets/img/product/16.png',
         'title' => 'Yellow One-piece',
         'tag' => 'Hot',
         'reviews' => '0 Reviews',
@@ -22,7 +22,7 @@ $products = [
     ],
     [
         'id' => 24,
-        'img' => 'assets/img/product/17.png', 
+        'img' => 'assets/img/product/17.png',
         'title' => 'Skinny Jeans',
         'tag' => 'Sale',
         'reviews' => '32 Reviews',
@@ -32,7 +32,7 @@ $products = [
     ],
     [
         'id' => 25,
-        'img' => 'assets/img/product/18.png', 
+        'img' => 'assets/img/product/18.png',
         'title' => 'Mini Skirts',
         'tag' => 'Sold Out',
         'reviews' => '0 Reviews',
@@ -42,7 +42,7 @@ $products = [
     ],
     [
         'id' => 26,
-        'img' => 'assets/img/product/19.png', 
+        'img' => 'assets/img/product/19.png',
         'title' => 'Straight-Leg Jeans',
         'tag' => 'Sale',
         'reviews' => '0 Reviews',
@@ -52,7 +52,7 @@ $products = [
     ],
     [
         'id' => 27,
-        'img' => 'assets/img/product/20.png', 
+        'img' => 'assets/img/product/20.png',
         'title' => 'Westside Denim Shorts',
         'tag' => 'New',
         'reviews' => '42 Reviews',
@@ -69,7 +69,7 @@ $products = [
             <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                 <div class="shop_thumb position-relative">
                     <div class="badge {{ $item['style'] }} text-white position-absolute ft-regular ab-left text-upper">{{ $item['tag'] }}</div>
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-left-hover-overlay">
                         <ul class="left-over-buttons">
                             <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
@@ -81,8 +81,8 @@ $products = [
             </div>
             <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
                 <div class="text-left mfliud">
-                    
-                    <h5 class="fs-md mb-0 lh-1 mb-1 ft-medium"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+
+                    <h5 class="fs-md mb-0 lh-1 mb-1 ft-medium"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                     <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
                         <i class="fas fa-star {{ $item['star'] }}"></i>
                         <i class="fas fa-star {{ $item['star'] }}"></i>

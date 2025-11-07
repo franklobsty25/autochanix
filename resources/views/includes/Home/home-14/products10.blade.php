@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 65,
-        'img' => 'assets/img/shop/7.png',
+        'img' => 'assets/img/shops/7.png',
         'title' => 'Premium Brake Pads Set',
         'name' => 'Brake System',
         'tag' => 'Sale',
@@ -13,7 +13,7 @@ $products = [
     ],
     [
         'id' => 66,
-        'img' => 'assets/img/shop/8.png',
+        'img' => 'assets/img/shops/8.png',
         'title' => 'Engine Oil Filter',
         'name' => 'Engine Parts',
         'tag' => 'New',
@@ -24,7 +24,7 @@ $products = [
     ],
     [
         'id' => 67,
-        'img' => 'assets/img/shop/11.png',
+        'img' => 'assets/img/shops/11.png',
         'title' => 'Michelin Pilot Sport Tires',
         'name' => 'Tires & Wheels',
         'tag' => 'Sold Out',
@@ -35,7 +35,7 @@ $products = [
     ],
     [
         'id' => 68,
-        'img' => 'assets/img/shop/4.png',
+        'img' => 'assets/img/shops/4.png',
         'title' => 'Car Battery 12V 75Ah',
         'name' => 'Electrical',
         'tag' => 'New',
@@ -46,7 +46,7 @@ $products = [
     ],
     [
         'id' => 69,
-        'img' => 'assets/img/shop/5.png',
+        'img' => 'assets/img/shops/5.png',
         'title' => 'Spark Plugs Set (4pcs)',
         'name' => 'Engine Parts',
         'tag' => 'Sale',
@@ -57,7 +57,7 @@ $products = [
     ],
     [
         'id' => 70,
-        'img' => 'assets/img/shop/6.png',
+        'img' => 'assets/img/shops/6.png',
         'title' => 'Air Filter Element',
         'name' => 'Filters',
         'tag' => 'New',
@@ -68,7 +68,7 @@ $products = [
     ],
     [
         'id' => 71,
-        'img' => 'assets/img/shop/7.png',
+        'img' => 'assets/img/shops/7.png',
         'title' => 'Phone Car Mount Holder',
         'name' => 'Accessories',
         'tag' => 'Sale',
@@ -79,7 +79,7 @@ $products = [
     ],
     [
         'id' => 72,
-        'img' => 'assets/img/shop/8.png',
+        'img' => 'assets/img/shops/8.png',
         'title' => 'Car Seat Covers Set',
         'name' => 'Interior',
         'tag' => 'Sold Out',

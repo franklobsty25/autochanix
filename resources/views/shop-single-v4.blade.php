@@ -1,4 +1,4 @@
-<!-- resources/views/shop-single-v4.blade.php -->
+<!-- resources/views/shops-single-v4.blade.php -->
 @extends('layouts.main')
 
 @section('title', 'Shop-Single-V4 Page')
@@ -6,7 +6,7 @@
 @section('content')
 
 @include('includes.navbar')
-			
+
 <!-- Top Breadcrubms -->
 <div class="gray py-3">
 	<div class="container">
@@ -29,19 +29,19 @@
 <section class="middle">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
-		
+
 			<div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
 				<div class="quick_view_slide">
 
-					<!-- includes/Product/shop-single-v4/image4.blade.php -->
+					<!-- includes/Product/shops-single-v4/image4.blade.php -->
 					@include('includes.Product.shop-single-v4.image4')
 
 				</div>
 			</div>
-			
+
 			<div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
 				<div class="prd_details ps-3">
-					
+
 					<div class="prt_01 mb-1"><span class="text-light bg-info rounded px-2 py-1">Dresses</span></div>
 					<div class="prt_02 mb-3">
 						<h2 class="ft-bold mb-1">Women Striped Shirt Dress</h2>
@@ -57,29 +57,29 @@
 							<div class="elis_rty"><span class="ft-medium text-muted line-through fs-md me-2">$199</span><span class="ft-bold theme-cl fs-lg me-2">$110</span><span class="ft-regular text-danger bg-light-danger py-1 px-2 fs-sm">Out of Stock</span></div>
 						</div>
 					</div>
-					
+
 					<div class="prt_03 mb-4">
 						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
 					</div>
-					
+
 					<div class="prt_04 mb-2">
 						<p class="d-flex align-items-center mb-0 text-dark ft-medium">Color:</p>
 						<div class="text-left">
-							
-							<!-- includes/Product/shop-single-v2/color.blade.php -->
+
+							<!-- includes/Product/shops-single-v2/color.blade.php -->
 							@include('includes.Product.shop-single-v2.color')
 
 						</div>
 					</div>
-					
+
 					<div class="prt_04 mb-4">
 						<p class="d-flex align-items-center mb-0 text-dark ft-medium">Size:</p>
 						<div class="text-left pb-0 pt-2">
-							<!-- includes/Product/shop-single-v2/sizes.blade.php -->
+							<!-- includes/Product/shops-single-v2/sizes.blade.php -->
 							@include('includes.Product.shop-single-v2.sizes')
 						</div>
 					</div>
-					
+
 					<div class="prt_05 mb-4">
 						<div class="form-row row g-3 mb-7">
 							<div class="col-12 col-md-6 col-lg-3">
@@ -95,7 +95,7 @@
 							<div class="col-12 col-md-12 col-lg-6">
 								<!-- Submit -->
 								<button type="submit" class="btn btn-block custom-height bg-dark mb-2 w-100">
-									<i class="lni lni-shopping-basket me-2"></i>Add to Cart 
+									<i class="lni lni-shopping-basket me-2"></i>Add to Cart
 								</button>
 							</div>
 							<div class="col-12 col-md-6 col-lg-3">
@@ -106,7 +106,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="prt_06">
 						<p class="mb-0 d-flex align-items-center">
 							<span class="me-4">Share:</span>
@@ -121,7 +121,7 @@
 							</a>
 						</p>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -146,9 +146,9 @@
 						<a class="nav-link" href="#reviews-tab" id="reviews-tab" data-bs-toggle="tab" role="tab" data-bs-target="#reviews" aria-controls="reviews" aria-selected="false">Reviews</a>
 					</li>
 				</ul>
-				
+
 				<div class="tab-content" id="myTabContent">
-					
+
 					<!-- Description Content -->
 					<div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
 						<div class="description_info">
@@ -156,36 +156,36 @@
 							<p class="p-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
 						</div>
 					</div>
-					
+
 					<!-- Additional Content -->
 					<div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">
 						<div class="additionals">
 							<table class="table">
 								<tbody>
-										
-									<!-- includes/Product/shop-single-v1/information.blade.php -->
+
+									<!-- includes/Product/shops-single-v1/information.blade.php -->
 					                @include('includes.Product.shop-single-v1.information')
 
 								</tbody>
 							</table>
 						</div>
 					</div>
-					
+
 					<!-- Reviews Content -->
 					<div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
 						<div class="reviews_info">
-							
-							<!-- includes/Product/shop-single-v1/reviews.blade.php -->
+
+							<!-- includes/Product/shops-single-v1/reviews.blade.php -->
 					        @include('includes.Product.shop-single-v1.reviews')
-							
+
 						</div>
-						
+
 						<div class="reviews_rate">
 							<form class="row g-3">
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<h4>Submit Rating</h4>
 								</div>
-								
+
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="revie_stars d-flex align-items-center justify-content-between px-2 py-2 gray rounded">
 										<div class="srt_013">
@@ -212,43 +212,43 @@
 												</label>
 											</div>
 										</div>
-										
+
 										<div class="srt_014">
 											<h6 class="mb-0">4 Star</h6>
 										</div>
 									</div>
 								</div>
-								
+
 								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group">
 										<label class="medium text-dark ft-medium mb-2">Full Name</label>
 										<input type="text" class="form-control rounded-2" />
 									</div>
 								</div>
-								
+
 								<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group">
 										<label class="medium text-dark ft-medium mb-2">Email Address</label>
 										<input type="email" class="form-control rounded-2" />
 									</div>
 								</div>
-								
+
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group">
 										<label class="medium text-dark ft-medium mb-2">Description</label>
 										<textarea class="form-control rounded-2"></textarea>
 									</div>
 								</div>
-								
+
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 									<div class="form-group m-0">
 										<a class="btn btn-white stretched-links hover-black rounded-2">Submit Review <i class="lni lni-arrow-right"></i></a>
 									</div>
 								</div>
-								
+
 							</form>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -260,7 +260,7 @@
 <!-- Similar Products Start -->
 <section class="middle pt-0">
 	<div class="container">
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -269,18 +269,18 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="slide_items">
-					
+
 					<!-- includes/Home/home-5/deals.blade.php -->
 					@include('includes.Home.home-5.deals')
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </section>
 <!-- Similar Products Start -->
@@ -289,10 +289,10 @@
 <section class="px-0 py-3 br-top">
 	<div class="container">
 		<div class="row">
-			
-			<!-- includes/Home/index/features2.blade.php -->
+
+			<!-- includes/Home/index/features.blade.php -->
 			@include('includes.Home.index.features2')
-			
+
 		</div>
 	</div>
 </section>
@@ -314,5 +314,5 @@
 @include('includes.Home.index.cart')
 
 @include('includes.footer')
-			
+
 @endsection

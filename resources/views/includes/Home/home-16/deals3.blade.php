@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 65,
-        'img' => 'assets/img/shop/9.png', 
+        'img' => 'assets/img/shops/9.png',
         'title' => 'iPhone 13 Pro Max',
         'name' => 'Mobiles',
         'tag' => 'Sale',
@@ -13,7 +13,7 @@ $products = [
     ],
     [
         'id' => 66,
-        'img' => 'assets/img/shop/10.png', 
+        'img' => 'assets/img/shops/10.png',
         'title' => 'boAt Rockerz 425',
         'name' => 'Headphones',
         'tag' => 'New',
@@ -24,7 +24,7 @@ $products = [
     ],
     [
         'id' => 67,
-        'img' => 'assets/img/shop/11.png', 
+        'img' => 'assets/img/shops/11.png',
         'title' => 'Apple iPhone 11(White)',
         'name' => 'Mobiles',
         'tag' => 'Sold Out',
@@ -35,7 +35,7 @@ $products = [
     ],
     [
         'id' => 68,
-        'img' => 'assets/img/shop/4.png', 
+        'img' => 'assets/img/shops/4.png',
         'title' => 'Apple iPhone 11(Black)',
         'name' => 'Mobiles',
         'tag' => 'New',
@@ -46,7 +46,7 @@ $products = [
     ],
     [
         'id' => 69,
-        'img' => 'assets/img/shop/5.png', 
+        'img' => 'assets/img/shops/5.png',
         'title' => 'Canon EOS Digital Camera',
         'name' => 'Camera',
         'tag' => 'Sale',
@@ -57,7 +57,7 @@ $products = [
     ],
     [
         'id' => 70,
-        'img' => 'assets/img/shop/6.png', 
+        'img' => 'assets/img/shops/6.png',
         'title' => 'JBL JR310BT Wireless Headphones',
         'name' => 'Headphone',
         'tag' => 'New',
@@ -68,7 +68,7 @@ $products = [
     ],
     [
         'id' => 71,
-        'img' => 'assets/img/shop/7.png', 
+        'img' => 'assets/img/shops/7.png',
         'title' => 'Sony 139 Cm Smart LED TV',
         'name' => 'TV/LCD',
         'tag' => 'Sale',
@@ -93,7 +93,7 @@ $products = [
 
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-left-hover-overlay">
                         <ul class="left-over-buttons">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}" class="d-inline-flex circle align-items-center justify-content-center quickview-btn"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
@@ -107,7 +107,7 @@ $products = [
                 <div class="text-left">
                     <div class="text-left">
                         <div class="elso_titl"><span class="small">{{ $item['name'] }}</span></div>
-                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                         <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                             <i class="fas fa-star {{ $item['rating'] }}"></i>
                             <i class="fas fa-star {{ $item['rating'] }}"></i>

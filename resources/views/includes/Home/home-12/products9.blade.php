@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 50,
-        'img' => 'assets/img/grocery/2.png', 
+        'img' => 'assets/img/grocery/2.png',
         'title' => 'Broccoli',
         'tag' => 'Sold Out',
         'style' => 'bg-sold',
@@ -11,7 +11,7 @@ $products = [
     ],
     [
         'id' => 51,
-        'img' => 'assets/img/grocery/3.png', 
+        'img' => 'assets/img/grocery/3.png',
         'title' => 'Hybrid Tomato',
         'tag' => '-50%',
         'style' => 'bg-danger',
@@ -20,7 +20,7 @@ $products = [
     ],
     [
         'id' => 59,
-        'img' => 'assets/img/grocery/11.png', 
+        'img' => 'assets/img/grocery/11.png',
         'title' => 'Ginger',
         'tag' => '-50%',
         'style' => 'bg-danger',
@@ -29,7 +29,7 @@ $products = [
     ],
     [
         'id' => 60,
-        'img' => 'assets/img/grocery/12.png', 
+        'img' => 'assets/img/grocery/12.png',
         'title' => 'Garlic',
         'tag' => 'Sold Out',
         'style' => 'bg-sold',
@@ -38,7 +38,7 @@ $products = [
     ],
     [
         'id' => 61,
-        'img' => 'assets/img/grocery/13.png', 
+        'img' => 'assets/img/grocery/13.png',
         'title' => 'Purple Brinjal',
         'tag' => 'Sale',
         'style' => 'bg-sale',
@@ -47,7 +47,7 @@ $products = [
     ],
     [
         'id' => 53,
-        'img' => 'assets/img/grocery/5.png', 
+        'img' => 'assets/img/grocery/5.png',
         'title' => 'Green Cucumber',
         'tag' => 'Sale',
         'style' => 'bg-sale',
@@ -56,7 +56,7 @@ $products = [
     ],
     [
         'id' => 54,
-        'img' => 'assets/img/grocery/6.png', 
+        'img' => 'assets/img/grocery/6.png',
         'title' => 'French Beans',
         'tag' => 'Hot',
         'style' => 'bg-hot',
@@ -65,7 +65,7 @@ $products = [
     ],
     [
         'id' => 62,
-        'img' => 'assets/img/grocery/14.png', 
+        'img' => 'assets/img/grocery/14.png',
         'title' => 'Green Capsicum',
         'tag' => 'Hot',
         'style' => 'bg-hot',
@@ -81,7 +81,7 @@ $products = [
             <div class="badge {{ $item['style'] }} text-white position-absolute ft-regular ab-left text-upper">{{ $item['tag'] }}</div>
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-left-hover-overlay">
                         <ul class="left-over-buttons">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}" class="d-inline-flex circle align-items-center justify-content-center quickview-btn"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
@@ -102,7 +102,7 @@ $products = [
                             <i class="fas fa-star"></i>
                             <span class="small">({{ $item['reviews'] }})</span>
                         </div>
-                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                         <div class="elis_rty"><span class="ft-bold text-success fs-sm">${{ $item['price'] }}</span></div>
                     </div>
                 </div>

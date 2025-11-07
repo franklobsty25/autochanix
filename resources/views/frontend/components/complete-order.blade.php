@@ -39,7 +39,7 @@
 				<!-- Text -->
 				<p class="ft-regular fs-md mb-5">Your order <span class="text-body text-dark">#965471202</span> has been completed. Your order details are shown for your personal accont.</p>
 				<!-- Button -->
-				<a class="btn btn-dark" href="#">Track Your Orders</a>
+				<a class="btn btn-dark" href="{{ url('/login') }}">Track Your Orders</a>
 			</div>
 		</div>
 

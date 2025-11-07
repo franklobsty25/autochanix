@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 9,
-        'img' => 'assets/img/product/2.jpg', 
+        'img' => 'assets/img/product/2.jpg',
         'title' => 'Women Striped Shirt Dress',
         'tag' => 'Sale',
         'tag1' => null,
@@ -13,7 +13,7 @@ $products = [
     ],
     [
         'id' => 10,
-        'img' => 'assets/img/product/3.jpg', 
+        'img' => 'assets/img/product/3.jpg',
         'title' => 'Boys Solid Sweatshirt',
         'tag' => 'Sold Out',
         'tag1' => '-40%',
@@ -24,7 +24,7 @@ $products = [
     ],
     [
         'id' => 11,
-        'img' => 'assets/img/product/1.jpg', 
+        'img' => 'assets/img/product/1.jpg',
         'title' => 'Girls Floral Print Jumpsuit',
         'tag' => 'Sale',
         'tag1' => null,
@@ -35,7 +35,7 @@ $products = [
     ],
     [
         'id' => 12,
-        'img' => 'assets/img/product/6.jpg', 
+        'img' => 'assets/img/product/6.jpg',
         'title' => 'Girls Solid A-Line Dress',
         'tag' => 'New',
         'tag1' => '-55%',
@@ -46,7 +46,7 @@ $products = [
     ],
     [
         'id' => 13,
-        'img' => 'assets/img/product/7.jpg', 
+        'img' => 'assets/img/product/7.jpg',
         'title' => 'Printed Straight Kurta',
         'tag' => 'New',
         'tag1' => '-30%',
@@ -57,7 +57,7 @@ $products = [
     ],
     [
         'id' => 14,
-        'img' => 'assets/img/product/3.jpg', 
+        'img' => 'assets/img/product/3.jpg',
         'title' => 'Women Printed A-Line Dress',
         'tag' => 'Sale',
         'tag1' => null,
@@ -68,7 +68,7 @@ $products = [
     ],
     [
         'id' => 15,
-        'img' => 'assets/img/product/9.jpg', 
+        'img' => 'assets/img/product/9.jpg',
         'title' => 'Girls Fit and Flare Dress',
         'tag' => 'Sale',
         'tag1' => null,
@@ -79,7 +79,7 @@ $products = [
     ],
     [
         'id' => 16,
-        'img' => 'assets/img/product/6.jpg', 
+        'img' => 'assets/img/product/6.jpg',
         'title' => 'Girls Self Design Jumpsuit',
         'tag' => 'New',
         'tag1' => '-60%',
@@ -104,7 +104,7 @@ $products = [
 
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-hover-overlay d-flex align-items-center justify-content-between">
                         <div class="edlio"><a href="javascript:void(0);" class="text-underline fs-sm ft-bold snackbar-addcart">Add To Cart</a></div>
                         <div class="edlio d-flex align-items-center">
@@ -125,7 +125,7 @@ $products = [
                             <i class="fas fa-star {{ $item['star'] }}"></i>
                             <span class="small">({{ $item['reviews'] }})</span>
                         </div>
-                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                         <div class="elis_rty"><span class="ft-bold text-dark fs-sm">${{ $item['price'] }}</span></div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 74,
-        'img' => 'assets/img/shop/14.png', 
+        'img' => 'assets/img/shops/14.png',
         'title' => 'Tissot Tradition Powermatic',
         'name' => 'watch',
         'tag' => 'Sale',
@@ -13,7 +13,7 @@ $products = [
     ],
     [
         'id' => 75,
-        'img' => 'assets/img/shop/15.png', 
+        'img' => 'assets/img/shops/15.png',
         'title' => 'Tissot Men TRADITION',
         'name' => 'watch',
         'tag' => 'New',
@@ -24,7 +24,7 @@ $products = [
     ],
     [
         'id' => 76,
-        'img' => 'assets/img/shop/17.png', 
+        'img' => 'assets/img/shops/17.png',
         'title' => 'IWC Portugieser Perpetual Watch',
         'name' => 'watch',
         'tag' => 'Sold Out',
@@ -35,7 +35,7 @@ $products = [
     ],
     [
         'id' => 77,
-        'img' => 'assets/img/shop/18.png', 
+        'img' => 'assets/img/shops/18.png',
         'title' => 'Michael Kors Men Runway Black Watch',
         'name' => 'watch',
         'tag' => 'Hot',
@@ -46,7 +46,7 @@ $products = [
     ],
     [
         'id' => 78,
-        'img' => 'assets/img/shop/19.png', 
+        'img' => 'assets/img/shops/19.png',
         'title' => 'Rolex Cosmograph Daytona Watch',
         'name' => 'watch',
         'tag' => 'Sale',
@@ -57,7 +57,7 @@ $products = [
     ],
     [
         'id' => 79,
-        'img' => 'assets/img/shop/20.png', 
+        'img' => 'assets/img/shops/20.png',
         'title' => "Movado Men's Bold Fusion Analog Watch",
         'name' => 'watch',
         'tag' => 'New',
@@ -68,7 +68,7 @@ $products = [
     ],
     [
         'id' => 80,
-        'img' => 'assets/img/shop/21.png', 
+        'img' => 'assets/img/shops/21.png',
         'title' => 'Philipp Plein Men Stainless Steel Strap Watch',
         'name' => 'watch',
         'tag' => 'Sold',
@@ -79,7 +79,7 @@ $products = [
     ],
     [
         'id' => 81,
-        'img' => 'assets/img/shop/16.png', 
+        'img' => 'assets/img/shops/16.png',
         'title' => 'Victorinox Men Green Dial Maverick Watch',
         'name' => 'watch',
         'tag' => 'New',
@@ -104,7 +104,7 @@ $products = [
 
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-left-hover-overlay">
                         <ul class="left-over-buttons">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}" class="d-inline-flex circle align-items-center justify-content-center quickview-btn"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
@@ -118,7 +118,7 @@ $products = [
                 <div class="text-left">
                     <div class="text-left">
                         <div class="elso_titl"><span class="small">{{ $item['name'] }}</span></div>
-                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                         <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                             <i class="fas fa-star {{ $item['rating'] }}"></i>
                             <i class="fas fa-star {{ $item['rating'] }}"></i>

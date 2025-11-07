@@ -1,4 +1,4 @@
-<!-- resources/views/shop-grid-3.blade.php -->
+<!-- resources/views/shops-grid-3.blade.php -->
 @extends('layouts.main')
 
 @section('title', 'Shop-Grid-3 Page')
@@ -6,7 +6,7 @@
 @section('content')
 
 @include('includes.navbar2')
-			
+
 <!-- Shop Style 1 -->
 <section class="bg-cover" style="background:url({{ asset('assets/img/banner-2.png') }}) no-repeat;">
 	<div class="container">
@@ -41,36 +41,36 @@
 					</ol>
 				</nav>
 			</div>
-			
-			<!-- includes/Shop/shop-style-1/filter.blade.php -->
+
+			<!-- includes/Shop/shops-style-1/filter.blade.php -->
 			@include('includes.Shop.shop-style-1.filter')
 
 		</div>
-		
+
 		<div class="row align-items-center justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12">
 				<div class="collapse" id="filterBox">
 					<div class="card py-3 b-0">
 						<div class="row">
-							
-							<!-- includes/Shop/shop-style-1/choose.blade.php -->
+
+							<!-- includes/Shop/shops-style-1/choose.blade.php -->
 							@include('includes.Shop.shop-style-1.choose')
-							
-							<!-- includes/Shop/shop-style-1/size.blade.php -->
+
+							<!-- includes/Shop/shops-style-1/size.blade.php -->
 							@include('includes.Shop.shop-style-1.size')
-							
-							<!-- includes/Shop/shop-style-1/colors.blade.php -->
+
+							<!-- includes/Shop/shops-style-1/colors.blade.php -->
 							@include('includes.Shop.shop-style-1.colors')
-							
-							<!-- includes/Shop/shop-style-1/price.blade.php -->
+
+							<!-- includes/Shop/shops-style-1/price.blade.php -->
 							@include('includes.Shop.shop-style-1.price')
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </section>
 <!-- Filter Wrap -->
@@ -78,22 +78,22 @@
 <!-- All Product List -->
 <section class="middle">
 	<div class="container">
-	
+
 		<!-- row -->
 		<div class="row align-items-center">
 
-			<!-- includes/shop-grid-3/product12.blade.php -->
+			<!-- includes/shops-grid-3/product12.blade.php -->
 			@include('includes.shop-grid-3.product12')
-			
+
 		</div>
 		<!-- row -->
-		
+
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 text-center">
 				<a href="" class="btn stretched-links borders m-auto"><i class="lni lni-reload me-2"></i>Load More</a>
 			</div>
 		</div>
-		
+
 	</div>
 </section>
 <!-- All Product List -->
@@ -114,5 +114,5 @@
 @include('includes.Home.index.cart')
 
 @include('includes.footer')
-			
+
 @endsection

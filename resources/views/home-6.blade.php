@@ -6,7 +6,7 @@
 @section('content')
 
 @include('includes.navbar')
-			
+
 <!-- Hero Banner Start  -->
 <section class="p-0">
 	<div class="container-fluid">
@@ -16,19 +16,19 @@
 			@include('includes.Home.home-6.banner')
 
 		</div>
-		
+
 		<div class="row no-gutters exlio_gutters">
-			
+
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<!-- row -->
 				<div class="row no-gutters">
 
 					<!-- includes/Home/home-6/banner2.blade.php -->
 					@include('includes.Home.home-6.banner2')
-					
+
 				</div>
 				<!-- /row -->
-				
+
 			</div>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 <!-- Product List -->
 <section class="middle">
 	<div class="container">
-	
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -47,24 +47,24 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- row -->
 		<div class="row align-items-center rows-products">
-		
+
 			<!-- includes/Home/home-6/products5.blade.php -->
 			@include('includes.Home.home-6.products5')
-			
+
 		</div>
 		<!-- row -->
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="position-relative text-center">
-					<a href="{{ url('/shop-style-1') }}" class="btn stretched-links borders">Explore More<i class="lni lni-arrow-right ms-2"></i></a>
+					<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Explore More<i class="lni lni-arrow-right ms-2"></i></a>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </section>
 <!-- Product List -->
@@ -72,7 +72,7 @@
 <!-- Customer Review -->
 <section class="gray">
 	<div class="container">
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -81,14 +81,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-9 col-lg-10 col-md-12 col-sm-12">
 				<div class="reviews-slide px-3">
-					
+
 					<!-- includes/Home/index/review.blade.php -->
 					@include('includes.Home.index.review')
-					
+
 				</div>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 <!-- Blog Start -->
 <section class="space min">
 	<div class="container">
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -108,14 +108,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row">
-			
+
 			<!-- includes/Home/index/blog.blade.php -->
 			@include('includes.Home.index.blog')
-			
+
 		</div>
-		
+
 	</div>
 </section>
 <!-- Blog Start -->
@@ -123,7 +123,7 @@
 <!-- Instagram Start -->
 <section class="p-0">
 	<div class="container-fluid p-0 overflow-hidden">
-		
+
 		<div class="row no-gutters">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -132,16 +132,16 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row no-gutters">
-			<div class="insta-slider"> 
-			
+			<div class="insta-slider">
+
 				<!-- includes/Home/index/insta.blade.php -->
 				@include('includes.Home.index.insta')
-				
+
 			</div>
 		</div>
-		
+
 	</div>
 </section>
 <!-- Instagram Start -->
@@ -150,10 +150,10 @@
 <section class="px-0 py-3 br-top">
 	<div class="container">
 		<div class="row">
-			
+
 			<!-- includes/blog-detail/features.blade.php -->
 			@include('includes.blog-detail.features')
-			
+
 		</div>
 	</div>
 </section>
@@ -178,5 +178,5 @@
 @include('includes.Home.index.popup-overlay')
 
 @include('includes.footer3')
-			
+
 @endsection

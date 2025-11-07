@@ -1,5 +1,5 @@
 <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12">
-    <form action="{{ url('/shop') }}" method="GET" class="d-flex justify-content-end align-items-center">
+    <form action="{{ url('/shops') }}" method="GET" class="d-flex justify-content-end align-items-center">
         <div class="input-group w-50">
             <input
                 type="text"

@@ -2,7 +2,7 @@
 $products = [
     [
         'id' => 1,
-        'img' => 'assets/img/product/1.jpg', 
+        'img' => 'assets/img/product/1.jpg',
         'title' => 'Half Running Set',
         'tag' => 'Sale',
         'tag1' => null,
@@ -13,7 +13,7 @@ $products = [
     ],
     [
         'id' => 4,
-        'img' => 'assets/img/product/4.jpg', 
+        'img' => 'assets/img/product/4.jpg',
         'title' => 'Half Fancy Lady Dress',
         'tag' => 'New',
         'tag1' => '-55%',
@@ -24,7 +24,7 @@ $products = [
     ],
     [
         'id' => 5,
-        'img' => 'assets/img/product/5.jpg', 
+        'img' => 'assets/img/product/5.jpg',
         'title' => 'Flix Flox Jeans',
         'tag' => 'Sale',
         'tag1' => '-30%',
@@ -35,7 +35,7 @@ $products = [
     ],
     [
         'id' => 3,
-        'img' => 'assets/img/product/3.jpg', 
+        'img' => 'assets/img/product/3.jpg',
         'title' => 'Half Running Suit',
         'tag' => 'Sold Out',
         'tag1' => null,
@@ -46,7 +46,7 @@ $products = [
     ],
     [
         'id' => 2,
-        'img' => 'assets/img/product/2.jpg', 
+        'img' => 'assets/img/product/2.jpg',
         'title' => 'Formal Men Lowers',
         'tag' => 'New',
         'tag1' => '-40%',
@@ -57,7 +57,7 @@ $products = [
     ],
     [
         'id' => 8,
-        'img' => 'assets/img/product/8.jpg', 
+        'img' => 'assets/img/product/8.jpg',
         'title' => 'Formal Fluex Kurti',
         'tag' => 'Sold Out',
         'tag1' => '-60%',
@@ -68,7 +68,7 @@ $products = [
     ],
     [
         'id' => 7,
-        'img' => 'assets/img/product/7.jpg', 
+        'img' => 'assets/img/product/7.jpg',
         'title' => 'Collot Full Dress',
         'tag' => 'Sale',
         'tag1' => null,
@@ -79,7 +79,7 @@ $products = [
     ],
     [
         'id' => 15,
-        'img' => 'assets/img/product/9.jpg', 
+        'img' => 'assets/img/product/9.jpg',
         'title' => 'Girls Fit and Flare Dress',
         'tag' => 'Sale',
         'tag1' => null,
@@ -104,7 +104,7 @@ $products = [
 
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-hover-overlay d-flex align-items-center justify-content-between">
                         <div class="edlio"><a href="javascript:void(0);" class="text-underline fs-sm ft-bold snackbar-addcart">Add To Cart</a></div>
                         <div class="edlio d-flex align-items-center">
@@ -125,7 +125,7 @@ $products = [
                             <i class="fas fa-star {{ $item['star'] }}"></i>
                             <span class="small">({{ $item['reviews'] }})</span>
                         </div>
-                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                        <h5 class="fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                         <div class="elis_rty"><span class="ft-bold text-dark fs-sm">${{ $item['price'] }}</span></div>
                     </div>
                 </div>

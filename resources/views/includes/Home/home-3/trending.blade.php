@@ -2,7 +2,7 @@
 $trendings = [
     [
         'id' => 1,
-        'img' => 'assets/img/product/1.jpg', 
+        'img' => 'assets/img/product/1.jpg',
         'title' => 'Half Running Set',
         'tag' => 'Sale',
         'style' => 'bg-success',
@@ -16,7 +16,7 @@ $trendings = [
     ],
     [
         'id' => 2,
-        'img' => 'assets/img/product/2.jpg', 
+        'img' => 'assets/img/product/2.jpg',
         'title' => 'Formal Men Lowers',
         'tag' => 'New',
         'style' => 'bg-info',
@@ -30,7 +30,7 @@ $trendings = [
     ],
     [
         'id' => 3,
-        'img' => 'assets/img/product/3.jpg', 
+        'img' => 'assets/img/product/3.jpg',
         'title' => 'Half Running Suit',
         'tag' => false,
         'style' => '',
@@ -44,7 +44,7 @@ $trendings = [
     ],
     [
         'id' => 4,
-        'img' => 'assets/img/product/4.jpg', 
+        'img' => 'assets/img/product/4.jpg',
         'title' => 'Half Fancy Lady Dress',
         'tag' => 'Hot',
         'style' => 'bg-warning',
@@ -58,7 +58,7 @@ $trendings = [
     ],
     [
         'id' => 5,
-        'img' => 'assets/img/product/5.jpg', 
+        'img' => 'assets/img/product/5.jpg',
         'title' => 'Flix Flox Jeans',
         'tag' => false,
         'style' => '',
@@ -72,7 +72,7 @@ $trendings = [
     ],
     [
         'id' => 6,
-        'img' => 'assets/img/product/6.jpg', 
+        'img' => 'assets/img/product/6.jpg',
         'title' => 'Fancy Salwar Suits',
         'tag' => 'Hot',
         'style' => 'bg-danger',
@@ -86,7 +86,7 @@ $trendings = [
     ],
     [
         'id' => 7,
-        'img' => 'assets/img/product/7.jpg', 
+        'img' => 'assets/img/product/7.jpg',
         'title' => 'Collot Full Dress',
         'tag' => 'Sale',
         'style' => 'bg-success',
@@ -100,7 +100,7 @@ $trendings = [
     ],
     [
         'id' => 8,
-        'img' => 'assets/img/product/8.jpg', 
+        'img' => 'assets/img/product/8.jpg',
         'title' => 'Formal Fluex Kurti',
         'tag' => 'Sale',
         'style' => 'bg-success',
@@ -125,7 +125,7 @@ $trendings = [
 
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                         <div class="edlio"><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}" class="text-white fs-sm ft-medium quickview-btn"><i class="fas fa-eye me-1"></i>Quick View</a></div>
                     </div>
@@ -152,11 +152,11 @@ $trendings = [
                         </div>
                     </div>
                     <div class="text-right">
-                        <button class="btn auto btn_love snackbar-wishlist"><i class="far fa-heart"></i></button> 
+                        <button class="btn auto btn_love snackbar-wishlist"><i class="far fa-heart"></i></button>
                     </div>
                 </div>
                 <div class="text-left">
-                    <h5 class="fw-nornal fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                    <h5 class="fw-nornal fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                     <div class="elis_rty"><span class="ft-medium text-dark fs-sm">${{ $item['price'] }}</span></div>
                 </div>
             </div>

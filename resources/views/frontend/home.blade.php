@@ -15,7 +15,7 @@
 		<div class="row">
 
 			<!-- includes/Home/home-14/features4.blade.php -->
-			@include('includes.Home.home-14.features4')
+			@include('frontend.components.features')
 
 		</div>
 	</div>
@@ -38,14 +38,14 @@
 		<div class="row align-items-center rows-products">
 
 			<!-- includes/Home/home-14/products10.blade.php -->
-			@include('includes.Home.home-14.products10')
+			@include('frontend.components.products')
 
 		</div>
 
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="position-relative text-center">
-					<a href="{{ url('/shop') }}" class="btn stretched-links borders" wire:navigate>Explore More<i class="lni lni-arrow-right ms-2"></i></a>
+					<a href="{{ url('/shops') }}" class="btn stretched-links borders" wire:navigate>Explore More<i class="lni lni-arrow-right ms-2"></i></a>
 				</div>
 			</div>
 		</div>
@@ -134,7 +134,7 @@
 				<div class="ftr-content">
 
 					<!-- includes/Home/home-14/seller.blade.php -->
-					@include('includes.Home.home-14.seller')
+					@include('frontend.components.seller')
 
 				</div>
 			</div>
@@ -144,7 +144,7 @@
 				<div class="ftr-content">
 
 					<!-- includes/Home/home-14/featured.blade.php -->
-					@include('includes.Home.home-14.featured')
+					@include('frontend.components.featured')
 
 				</div>
 			</div>
@@ -154,7 +154,7 @@
 				<div class="ftr-content">
 
 					<!-- includes/Home/home-14/recent.blade.php -->
-					@include('includes.Home.home-14.recent')
+					@include('frontend.components.recent')
 
 				</div>
 			</div>

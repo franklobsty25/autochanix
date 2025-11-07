@@ -6,7 +6,7 @@
 @section('content')
 
 @include('includes.navbar2')
-		
+
 <!-- Top Breadcrubms -->
 <div class="gray py-3">
 	<div class="container">
@@ -28,7 +28,7 @@
 <!-- Product Detail -->
 <section class="middle">
 	<div class="container">
-	
+
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="text-center d-block mb-5">
@@ -36,9 +36,9 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="cart-content-wrapper">
-			
+
 			@php
 				$cart = $cart ?? session('cart', []);
 				$subtotal = $subtotal ?? 0;
@@ -116,15 +116,15 @@
 						@endphp
 							<ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular">
-								<span>Subtotal</span> 
+								<span>Subtotal</span>
 								<span class="ms-auto text-dark ft-medium" id="cart-subtotal">${{ number_format($subtotal, 2) }}</span>
 								</li>
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular">
-								<span>Tax</span> 
+								<span>Tax</span>
 								<span class="ms-auto text-dark ft-medium" id="cart-tax">${{ number_format($tax, 2) }}</span>
 								</li>
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular">
-								<span>Total</span> 
+								<span>Total</span>
 								<span class="ms-auto text-dark ft-medium" id="cart-total">${{ number_format($total, 2) }}</span>
 								</li>
 								<li class="list-group-item fs-sm text-center">
@@ -133,9 +133,9 @@
 							</ul>
 						</div>
 					</div>
-				
+
 					<a class="btn btn-block btn-dark w-100 mb-3" href="{{ url('/checkout') }}">Proceed to Checkout</a>
-					
+
 					<a class="btn-link text-dark ft-medium" href="{{ url('/') }}">
 						<i class="ti-back-left me-2"></i> Continue Shopping
 					</a>
@@ -149,13 +149,13 @@
 					<h2 class="mt-2 mb-2 ft-bold">Your Cart is empty!</h2>
 					<p class="text-muted fs-6">Your Cart is empty please go to the shop page and Buy your favourite items.</p>
 					<div class="position-relative text-center">
-						<a href="{{ url('/shop-style-1') }}" class="btn stretched-links borders">Shop Now</i></a>
+						<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Shop Now</i></a>
 					</div>
 				</div>
 			@endif
 
 		</div>
-		
+
 	</div>
 </section>
 <!-- Product Detail End -->
@@ -164,10 +164,10 @@
 <section class="px-0 py-3 br-top">
 	<div class="container">
 		<div class="row">
-			
+
 			<!-- includes/blog-detail/features.blade.php -->
 			@include('includes.blog-detail.features')
-			
+
 		</div>
 	</div>
 </section>
@@ -189,5 +189,5 @@
 @include('includes.Home.index.cart')
 
 @include('includes.footer')
-			
+
 @endsection

@@ -27,8 +27,8 @@
                 <div class="sp-wrap">
                     <a href="{{ !empty($item['img']) ? asset($item['img']) : asset('assets/img/product/7.jpg') }}"><img src="{{ !empty($item['img']) ? asset($item['img']) : asset('assets/img/product/7.jpg') }}" alt=""></a>
 
-                    <!-- includes/Product/shop-single-v1/image.blade.php -->
-					{{-- @include('includes.Product.shop-single-v1.image') --}}
+                    <!-- includes/Product/shops-single-v1/image.blade.php -->
+					{{-- @include('includes.Product.shops-single-v1.image') --}}
 
                 </div>
             </div>
@@ -87,13 +87,13 @@
                             </div>
                             <div class="col-12 col-md-12 col-lg-6">
                                 <!-- Submit -->
-                                <button type="submit" class="btn btn-block custom-height bg-dark mb-2 w-100">
+                                <button type="submit" class="btn btn-block custom-height bg-dark mb-2 w-100 snackbar-addcart">
                                     <i class="lni lni-shopping-basket me-2"></i>Add to Cart
                                 </button>
                             </div>
                             <div class="col-12 col-md-6 col-lg-3">
                                 <!-- Wishlist -->
-                                <button class="btn custom-height btn-default btn-block mb-2 text-dark w-100" data-bs-toggle="button">
+                                <button class="btn custom-height btn-default btn-block mb-2 text-dark w-100 snackbar-wishlist" data-bs-toggle="button">
                                     <i class="lni lni-heart me-2"></i>Wishlist
                                 </button>
                             </div>
@@ -155,7 +155,7 @@
                             <table class="table">
                                 <tbody>
 
-                                    <!-- includes/Product/shop-single-v1/information.blade.php -->
+                                    <!-- includes/Product/shops-single-v1/information.blade.php -->
 					                @include('includes.Product.shop-single-v1.information')
 
                                 </tbody>
@@ -167,7 +167,7 @@
                     <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                         <div class="reviews_info">
 
-                            <!-- includes/Product/shop-single-v1/reviews.blade.php -->
+                            <!-- includes/Product/shops-single-v1/reviews.blade.php -->
 					        @include('includes.Product.shop-single-v1.reviews')
 
                         </div>
@@ -283,7 +283,7 @@
     <div class="container">
         <div class="row">
 
-            <!-- includes/Home/index/features2.blade.php -->
+            <!-- includes/Home/index/features.blade.php -->
 			@include('includes.Home.index.features2')
 
         </div>

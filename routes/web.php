@@ -20,36 +20,40 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/shop', function () {
-    return view('frontend.shop');
+    return view('frontend.shops.shop');
 })->name('shop');
 
 Route::get('/shop-details', function () {
-    return view('frontend.shop-details');
+    return view('frontend.shops.shop-details');
 })->name('shop-details');
 
 Route::get('/about-us', function () {
-    return view('frontend.about-us');
+    return view('frontend.supports.about-us');
 });
 Route::get('/contact', function () {
-    return view('frontend.contact');
+    return view('frontend.supports.contact');
 });
 Route::get('/privacy', function () {
-    return view('frontend.privacy');
+    return view('frontend.supports.privacy');
 });
 Route::get('/faq', function () {
-    return view('frontend.faq');
+    return view('frontend.supports.faq');
 });
 
 Route::get('/checkout', function () {
-    return view('frontend.checkout');
+    return view('frontend.components.checkout');
 });
 
 Route::get('/complete-order', function () {
-    return view('frontend.complete-order');
+    return view('frontend.components.complete-order');
+});
+
+Route::get('/my-orders', function () {
+    return view('frontend.components.my-orders');
 });
 
 Route::get('/docs', function () {
-    return view('shop-single-v4');
+    return view('addresses');
 });
 
 Route::view('dashboard', 'dashboard')

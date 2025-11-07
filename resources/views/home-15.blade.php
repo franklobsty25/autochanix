@@ -6,16 +6,16 @@
 @section('content')
 
 @include('includes.navbar6')
-			
+
 <!-- Category & Slider -->
 <section class="p-0">
 	<div class="container">
 		<div class="row">
-		
+
 			<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
 				<div class="killore-new-block-link border mb-3 mt-3">
 					<div class="px-3 py-3 ft-medium fs-md text-dark gray">Top Categories</div>
-					
+
 					<div class="killore--block-link-content">
 						<ul>
 							<li><a href="javascript:void(0);"><i class="fas fa-tshirt"></i>Fashion</a></li>
@@ -29,7 +29,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
 				<div class="home-slider auto-slider mb-3 mt-3">
 
@@ -38,7 +38,7 @@
 
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 </section>
@@ -47,7 +47,7 @@
 <!-- Product List -->
 <section class="middle">
 	<div class="container">
-	
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -56,22 +56,22 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="row align-items-center rows-products">			
-			
+
+		<div class="row align-items-center rows-products">
+
 			<!-- includes/Home/home-14/products10.blade.php -->
 			@include('includes.Home.home-14.products10')
-			
+
 		</div>
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="position-relative text-center">
-					<a href="{{ url('/shop-style-1') }}" class="btn stretched-links borders">Explore More<i class="lni lni-arrow-right ms-2"></i></a>
+					<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Explore More<i class="lni lni-arrow-right ms-2"></i></a>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </section>
 <!-- Product List -->
@@ -82,10 +82,10 @@
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12">
 				<div class="smart-brand">
-					
+
 					<!-- includes/Home/home-14/brand.blade.php -->
 					@include('includes.Home.home-14.brand')
-					
+
 				</div>
 			</div>
 		</div>
@@ -114,7 +114,7 @@
 <!-- All Category  -->
 <section class="middle">
 	<div class="container">
-	
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -123,14 +123,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row align-items-center justify-content-center g-xl-5 g-4">
-				
+
 			<!-- includes/Home/home-14/categories3.blade.php -->
 			@include('includes.Home.home-14.categories3')
 
 		</div>
-		
+
 	</div>
 </section>
 <!-- All Category  -->
@@ -138,7 +138,7 @@
 <!-- Customer Review -->
 <section class="gray">
 	<div class="container">
-	
+
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<div class="sec_title position-relative text-center">
@@ -147,14 +147,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row justify-content-center">
 			<div class="col-xl-9 col-lg-10 col-md-12 col-sm-12">
 				<div class="reviews-slide px-3">
-					
+
 					<!-- includes/Home/index/review.blade.php -->
 					@include('includes.Home.index.review')
-					
+
 				</div>
 			</div>
 		</div>
@@ -165,41 +165,41 @@
 <!-- Top Seller Start -->
 <section class="space min">
 	<div class="container">
-		
+
 		<div class="row">
-			
+
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 				<div class="top-seller-title"><h4 class="ft-medium">Top Seller</h4></div>
 				<div class="ftr-content">
-				
+
 					<!-- includes/Home/home-14/seller.blade.php -->
 					@include('includes.Home.home-14.seller')
-					
+
 				</div>
 			</div>
-			
+
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 				<div class="ftr-title"><h4 class="ft-medium">Featured Products</h4></div>
 				<div class="ftr-content">
-					
+
 					<!-- includes/Home/home-14/featured.blade.php -->
 					@include('includes.Home.home-14.featured')
 
 				</div>
 			</div>
-			
+
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 				<div class="ftr-title"><h4 class="ft-medium">Recent Products</h4></div>
 				<div class="ftr-content">
-					
+
 					<!-- includes/Home/home-14/recent.blade.php -->
 					@include('includes.Home.home-14.recent')
 
 				</div>
 			</div>
-			
+
 		</div>
-		
+
 	</div>
 </section>
 <!-- Top Seller Start -->
@@ -208,10 +208,10 @@
 <section class="px-0 py-3 br-top">
 	<div class="container">
 		<div class="row">
-			
-			<!-- includes/Home/index/features2.blade.php -->
+
+			<!-- includes/Home/index/features.blade.php -->
 			@include('includes.Home.index.features2')
-			
+
 		</div>
 	</div>
 </section>
@@ -233,5 +233,5 @@
 @include('includes.Home.index.cart')
 
 @include('includes.footer')
-			
+
 @endsection

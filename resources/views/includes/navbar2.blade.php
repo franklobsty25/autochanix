@@ -1,15 +1,15 @@
 <div class="py-2 bg-dark">
     <div class="container">
         <div class="row">
-            
+
             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 hide-ipad">
                 <div class="top_first"><a href="callto:(+84)0123456789" class="medium text-light">(+84) 0123 456 789</a></div>
             </div>
-            
+
             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 hide-ipad">
                 <div class="top_second text-center"><p class="medium text-light m-0 p-0">Get Free delivery from $2000 <a href="#" class="medium text-light text-underline">Shop Now</a></p></div>
             </div>
-            
+
             <!-- Right Menu -->
             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
 
@@ -19,14 +19,14 @@
                         <span class="iso_code medium text-light">$USD</span>
                         <i class="fa fa-angle-down medium text-light"></i>
                     </a>
-                    <ul class="popup-content dropdown-menu">  
+                    <ul class="popup-content dropdown-menu">
                         <li><a title="Euro" href="#" class="dropdown-item medium text-medium">EUR €</a></li>
                         <li class="current"><a title="US Dollar" href="#" class="dropdown-item medium text-medium">USD $</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Choose Language -->
-            
+
                 <div class="language-selector-wrapper dropdown js-dropdown float-right me-3">
                     <a class="popup-title" href="javascript:void(0)" data-bs-toggle="dropdown" title="Language" aria-label="Language dropdown">
                         <span class="hidden-xl-down medium text-light">Language:</span>
@@ -42,17 +42,17 @@
                         <li ><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="{{ asset('assets/img/6.jpg') }}" alt="ar" width="16" height="11" /><span>اللغة العربية</span></a></li>
                     </ul>
                 </div>
-                
+
                 <div class="currency-selector dropdown js-dropdown float-right me-3">
                     <a href="javascript:void(0);" class="text-light medium">Wishlist</a>
                 </div>
-                
+
                 <div class="currency-selector dropdown js-dropdown float-right me-3">
                     <a href="javascript:void(0);" class="text-light medium">My Account</a>
                 </div>
-                
+
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -99,7 +99,7 @@
             </div>
             <div class="nav-menus-wrapper" style="transition-property: none;">
                 <ul class="nav-menu">
-                
+
                     <li class="relative parent-parent-menu-item">
                         <a href="javascript:void(0);" class="home-link">Home</a>
                         <ul class="nav-dropdown nav-submenu">
@@ -122,7 +122,7 @@
                             <li><a href="{{ url('/home-17') }}" class="sub-menu-item">Home 17</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="relative parent-parent-menu-item">
                         <a href="javascript:void(0);" class="home-link">Shop</a>
                         <ul class="nav-dropdown nav-submenu">
@@ -137,20 +137,20 @@
                             </li>
                             <li class="relative parent-menu-item"><a href="javascript:void(0);">Shop</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="{{ url('/shop-style-1') }}" class="sub-menu-item">Shop Style 01</a></li>
-                                    <li><a href="{{ url('/shop-style-2') }}" class="sub-menu-item">Shop Style 02</a></li>
-                                    <li><a href="{{ url('/shop-style-3') }}" class="sub-menu-item">Shop Style 03</a></li>
-                                    <li><a href="{{ url('/shop-style-4') }}" class="sub-menu-item">Shop Style 04</a></li>
-                                    <li><a href="{{ url('/shop-style-5') }}" class="sub-menu-item">Shop Style 05</a></li>
-                                    <li><a href="{{ url('/shop-list-view') }}" class="sub-menu-item">Shop List Style</a></li>
+                                    <li><a href="{{ url('/shops-style-1') }}" class="sub-menu-item">Shop Style 01</a></li>
+                                    <li><a href="{{ url('/shops-style-2') }}" class="sub-menu-item">Shop Style 02</a></li>
+                                    <li><a href="{{ url('/shops-style-3') }}" class="sub-menu-item">Shop Style 03</a></li>
+                                    <li><a href="{{ url('/shops-style-4') }}" class="sub-menu-item">Shop Style 04</a></li>
+                                    <li><a href="{{ url('/shops-style-5') }}" class="sub-menu-item">Shop Style 05</a></li>
+                                    <li><a href="{{ url('/shops-list-view') }}" class="sub-menu-item">Shop List Style</a></li>
                                 </ul>
                             </li>
                             <li class="relative parent-menu-item"><a href="javascript:void(0);">Shop Detail</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="{{ url('/shop-single-v1') }}" class="sub-menu-item">Product Detail v01</a></li>
-                                    <li><a href="{{ url('/shop-single-v2') }}" class="sub-menu-item">Product Detail v02</a></li>
-                                    <li><a href="{{ url('/shop-single-v3') }}" class="sub-menu-item">Product Detail v03</a></li>
-                                    <li><a href="{{ url('/shop-single-v4') }}" class="sub-menu-item">Product Detail v04</a></li>
+                                    <li><a href="{{ url('/shops-single-v1') }}" class="sub-menu-item">Product Detail v01</a></li>
+                                    <li><a href="{{ url('/shops-single-v2') }}" class="sub-menu-item">Product Detail v02</a></li>
+                                    <li><a href="{{ url('/shops-single-v3') }}" class="sub-menu-item">Product Detail v03</a></li>
+                                    <li><a href="{{ url('/shops-single-v4') }}" class="sub-menu-item">Product Detail v04</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{ url('/shoping-cart') }}" class="sub-menu-item">Shopping Cart</a></li>
@@ -158,7 +158,7 @@
                             <li><a href="{{ url('/complete-order') }}" class="sub-menu-item">Order Complete</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="relative parent-parent-menu-item">
                         <a href="javascript:void(0);" class="home-link">Blog</a>
                         <ul class="nav-dropdown nav-submenu">
@@ -201,11 +201,11 @@
                             <li><a href="{{ url('/faq') }}" class="sub-menu-item">FAQs</a></li>
                         </ul>
                     </li>
-                    
+
                     <li><a href="{{ url('/docs') }}" class="sub-menu-item">Docs</a></li>
-                    
+
                 </ul>
-                
+
                 <ul class="nav-menu nav-menu-social align-to-right">
                     <li>
                         <a href="javascript:void(0);" onclick="openSearch()">

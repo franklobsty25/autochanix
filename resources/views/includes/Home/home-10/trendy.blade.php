@@ -2,7 +2,7 @@
 $trendys = [
     [
         'id' => 33,
-        'img' => 'assets/img/product/a.jpg', 
+        'img' => 'assets/img/product/a.jpg',
         'title' => 'Homer Vase',
         'tag' => 'Sale',
         'style' => 'bg-sale',
@@ -12,7 +12,7 @@ $trendys = [
     ],
     [
         'id' => 34,
-        'img' => 'assets/img/product/b.jpg', 
+        'img' => 'assets/img/product/b.jpg',
         'title' => 'Sala Vase',
         'tag' => 'New',
         'style' => 'bg-new',
@@ -22,7 +22,7 @@ $trendys = [
     ],
     [
         'id' => 35,
-        'img' => 'assets/img/product/c.jpg', 
+        'img' => 'assets/img/product/c.jpg',
         'title' => 'Corbin Vase',
         'tag' => false,
         'style' => '',
@@ -32,7 +32,7 @@ $trendys = [
     ],
     [
         'id' => 36,
-        'img' => 'assets/img/product/d.jpg', 
+        'img' => 'assets/img/product/d.jpg',
         'title' => 'Penny Vase',
         'tag' => 'Hot',
         'style' => 'bg-hot',
@@ -42,7 +42,7 @@ $trendys = [
     ],
     [
         'id' => 37,
-        'img' => 'assets/img/product/e.jpg', 
+        'img' => 'assets/img/product/e.jpg',
         'title' => 'Chika Vase',
         'tag' => false,
         'style' => '',
@@ -52,7 +52,7 @@ $trendys = [
     ],
     [
         'id' => 38,
-        'img' => 'assets/img/product/e.jpg', 
+        'img' => 'assets/img/product/e.jpg',
         'title' => 'Little Fatty Vase',
         'tag' => 'Hot',
         'style' => 'bg-hot',
@@ -62,7 +62,7 @@ $trendys = [
     ],
     [
         'id' => 39,
-        'img' => 'assets/img/product/f.jpg', 
+        'img' => 'assets/img/product/f.jpg',
         'title' => 'Arc Vessel',
         'tag' => 'Sale',
         'style' => 'bg-sale',
@@ -72,7 +72,7 @@ $trendys = [
     ],
     [
         'id' => 40,
-        'img' => 'assets/img/product/g.jpg', 
+        'img' => 'assets/img/product/g.jpg',
         'title' => 'Tubular Vase',
         'tag' => false,
         'style' => '',
@@ -91,10 +91,10 @@ $trendys = [
                 <div class="badge {{ $item['style'] }} text-white position-absolute ft-regular ab-left text-upper">{{ $item['tag'] }}</div>
             @endif
 
-            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button> 
+            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
             <div class="card-body p-0">
                 <div class="shop_thumb position-relative">
-                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
+                    <a class="card-img-top d-block overflow-hidden" href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}"><img class="card-img-top" src="{{ asset($item['img']) }}" alt="..."></a>
                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                         <div class="edlio"><a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-product-id="{{ $item['id'] }}" class="text-white fs-sm ft-medium quickview-btn"><i class="fas fa-eye me-1"></i>Quick View</a></div>
                     </div>
@@ -103,7 +103,7 @@ $trendys = [
             <div class="card-footers b-0 pt-3 px-2 bg-white d-flex align-items-start justify-content-center">
                 <div class="text-left">
                     <div class="text-center">
-                        <h5 class="fw-normal fs-md mb-0 lh-1 mb-1"><a href="{{ route('shop-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
+                        <h5 class="fw-normal fs-md mb-0 lh-1 mb-1"><a href="{{ route('shops-single-v1', ['title' => Str::slug($item['title'])]) }}">{{ $item['title'] }}</a></h5>
                         <div class="elis_rty">
                             @if ($item['original_price'])
                                 <span class="text-muted ft-medium line-through me-2">${{ $item['original_price'] }}.00</span>

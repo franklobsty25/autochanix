@@ -6,7 +6,7 @@
 @section('content')
 
 @include('includes.navbar2')
-			
+
 <!-- Top Breadcrubms -->
 <div class="gray py-3">
 	<div class="container">
@@ -29,7 +29,7 @@
 <section class="middle">
 	<div class="container">
 		<div class="row align-items-start justify-content-between">
-		
+
 			<div class="col-12 col-md-12 col-lg-4 col-xl-4 text-center miliods">
 				<div class="d-block border rounded">
 					<div class="dashboard_author px-2 py-5">
@@ -41,7 +41,7 @@
 							<span class="text-muted smalls">Australia</span>
 						</div>
 					</div>
-					
+
 					<div class="dashboard_author">
 						<h4 class="px-3 py-2 mb-0 lh-2 gray fs-sm ft-medium text-muted text-uppercase text-left">Dashboard Navigation</h4>
 						<ul class="dahs_navbar">
@@ -53,28 +53,28 @@
 							<li><a href="{{ url('/login') }}"><i class="lni lni-power-switch me-2"></i>Log Out</a></li>
 						</ul>
 					</div>
-					
+
 				</div>
 			</div>
-			
+
 			<div class="col-12 col-md-12 col-lg-8 col-xl-8 text-center">
-			
+
 				<!-- Single Order List -->
 				<div class="ord_list_wrap border mb-4 mfliud">
 					<div class="ord_list_head gray d-flex align-items-center justify-content-between px-3 py-3">
 						<div class="olh_flex">
 							<p class="m-0 p-0"><span class="text-muted">Order Number</span></p>
 							<h6 class="mb-0 ft-medium">#1250004123</h6>
-						</div>	
+						</div>
 						<div class="olh_flex">
 							<a href="javascript:void(0);" class="btn btn-sm btn-dark">Track Order</a>
-						</div>	
+						</div>
 					</div>
 					<div class="ord_list_body text-left">
 
 						<!-- includes/Shop/Account-Dashboard/my-orders/order.blade.php -->
 						@include('includes.Shop.Account-Dashboard.my-orders.order')
-						
+
 					</div>
 					<div class="ord_list_footer d-flex align-items-center justify-content-between br-top px-3 text-start">
 						<div class="col-xl-3 col-lg-3 col-md-4 olf_flex text-left px-0 py-2 br-right"><a href="javascript:void(0);" class="ft-medium fs-sm"><i class="ti-close me-2"></i>Cancel Order</a></div>
@@ -85,20 +85,20 @@
 					</div>
 				</div>
 				<!-- End Order List -->
-				
+
 				<!-- Single Order List -->
 				<div class="ord_list_wrap border mb-4">
 					<div class="ord_list_head gray d-flex align-items-center justify-content-between px-3 py-3">
 						<div class="olh_flex">
 							<p class="m-0 p-0"><span class="text-muted">Order Number</span></p>
 							<h6 class="mb-0 ft-medium">#1250004122</h6>
-						</div>		
+						</div>
 					</div>
 					<div class="ord_list_body text-left">
 
 						<!-- includes/Shop/Account-Dashboard/my-orders/order2.blade.php -->
 						@include('includes.Shop.Account-Dashboard.my-orders.order2')
-						
+
 					</div>
 					<div class="ord_list_footer d-flex align-items-center justify-content-between br-top px-3">
 						<div class="col-xl-12 col-lg-12 col-md-12 ps-0 py-2 olf_flex d-flex align-items-center justify-content-between">
@@ -108,9 +108,9 @@
 					</div>
 				</div>
 				<!-- End Order List -->
-				
+
 			</div>
-			
+
 		</div>
 	</div>
 </section>
@@ -120,10 +120,10 @@
 <section class="px-0 py-3 br-top">
 	<div class="container">
 		<div class="row">
-			
+
 			<!-- includes/blog-detail/features.blade.php -->
 			@include('includes.blog-detail.features')
-			
+
 		</div>
 	</div>
 </section>
@@ -145,5 +145,5 @@
 @include('includes.Home.index.cart')
 
 @include('includes.footer')
-			
+
 @endsection

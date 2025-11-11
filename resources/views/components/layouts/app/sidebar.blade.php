@@ -23,6 +23,9 @@
                     @if(auth()->user()->can('products.index') || auth()->user()->can('products.create') || auth()->user()->can('products.edit') || auth()->user()->can('products.show') || auth()->user()->can('products.delete'))
                     <flux:navlist.item wire:navigate icon="list-bullet" :href="route('products.index')" :current="request()->routeIs('products.index')" wire:navigate>{{ __('Products') }}</flux:navlist.item>
                     @endif
+                    @if(auth()->user()->can('sales-report.view'))
+                    <flux:navlist.item wire:navigate icon="chart-bar" :href="route('sales-report')" :current="request()->routeIs('sales-report')" wire:navigate>{{ __('Sales Report') }}</flux:navlist.item>
+                    @endif
                 </flux:navlist.group>
             </flux:navlist>
 

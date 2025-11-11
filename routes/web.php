@@ -60,6 +60,10 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::view('sales-report', 'sales-report')
+    ->middleware(['auth', 'verified'])
+    ->name('sales-report');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 

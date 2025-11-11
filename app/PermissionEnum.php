@@ -19,4 +19,5 @@ enum PermissionEnum: string
     case RolesEdit = 'roles.edit';
     case RolesShow = 'roles.show';
     case RolesDelete = 'roles.delete';
+    case SalesReportView = 'sales-report.view';
 }

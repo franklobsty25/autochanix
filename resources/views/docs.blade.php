@@ -100,7 +100,7 @@
 
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
-								<!-- includes/Docs/breadcrumb.blade.php -->
+								<!-- includes/Docs/nav.blade.php -->
 								@include('includes.Docs.breadcrumb')
 
 							</div>

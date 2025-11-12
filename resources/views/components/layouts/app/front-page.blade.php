@@ -28,25 +28,26 @@
         <!-- Main Content -->
         <div class="content">
             <!-- includes.navbar6 -->
-            @include('frontend.components.navbar')
+{{--            @include('frontend.components.navbar')--}}
+            <livewire:frontend.components.navbar />
             {{ $slot }}
             <!-- includes/Home/index/quickview.blade.php -->
-            @include('frontend.components.quickview')
+            <livewire:frontend.components.quickview />
 
             <!-- includes/Home/index/log.blade.php -->
-            @include('frontend.components.login')
+            <livewire:frontend.components.login />
 
             <!-- includes/Home/index/search.blade.php -->
-            @include('frontend.components.search')
+            <livewire:frontend.components.search />
 
             <!-- includes/Home/index/wishlist.blade.php -->
-            @include('frontend.components.wishlist')
+            <livewire:frontend.components.wishlist />
 
             <!-- includes/Home/index/cart.blade.php -->
-            @include('frontend.components.cart')
+            <livewire:frontend.components.cart />
 
             <!-- includes.footer -->
-            @include('frontend.components.footer')
+            <livewire:frontend.components.footer />
         </div>
 
         <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
@@ -140,6 +141,10 @@
             }, 1000);
         })();
     </script>
+
+    @isset($scripts)
+        {{ $scripts }}
+    @endisset
 
 </body>
 

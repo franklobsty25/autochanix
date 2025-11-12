@@ -1,17 +1,19 @@
 <?php
 
-use App\Livewire\Dashboards\Addresses;
-use App\Livewire\Dashboards\Orders;
-use App\Livewire\Dashboards\PaymentMethod;
-use App\Livewire\Dashboards\Profile;
-use App\Livewire\Frontends\Checkout;
-use App\Livewire\Frontends\CompleteOrder;
-use App\Livewire\Frontends\ShoppingCart;
-use App\Livewire\Dashboards\Wishlist;
-use App\Livewire\Frontends\Supports\AboutUs;
-use App\Livewire\Frontends\Supports\Contact;
-use App\Livewire\Frontends\Supports\Faq;
-use App\Livewire\Frontends\Supports\PrivacyPolicy;
+use App\Livewire\Dashboard\Addresses;
+use App\Livewire\Dashboard\Orders;
+use App\Livewire\Dashboard\PaymentMethod;
+use App\Livewire\Dashboard\Profile;
+use App\Livewire\Frontend\Checkout;
+use App\Livewire\Frontend\CompleteOrder;
+use App\Livewire\Frontend\Shop;
+use App\Livewire\Frontend\Shop\Components\Details;
+use App\Livewire\Frontend\ShoppingCart;
+use App\Livewire\Dashboard\Wishlist;
+use App\Livewire\Frontend\Supports\AboutUs;
+use App\Livewire\Frontend\Supports\Contact;
+use App\Livewire\Frontend\Supports\Faq;
+use App\Livewire\Frontend\Supports\PrivacyPolicy;
 use App\Livewire\Products\ProductCreate;
 use App\Livewire\Products\ProductEdit;
 use App\Livewire\Products\ProductIndex;
@@ -31,18 +33,6 @@ Route::get('/', function () {
     return view('frontend.home');
 })->name('home');
 
-Route::get('/shop', function () {
-    return view('frontend.shops.shop');
-})->name('shop');
-
-Route::get('/shop-details', function () {
-    return view('frontend.shops.shop-details');
-})->name('shop-details');
-
-Route::get('/docs', function () {
-    return view('my-orders');
-});
-
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -52,7 +42,6 @@ Route::view('sales-report', 'sales-report')
     ->name('sales-report');
 
 /**
- *
  * Livewire Block
  */
 Route::get('/about-us', AboutUs::class)->name('about-us');
@@ -67,6 +56,8 @@ Route::get('/profile', Profile::class)->name('profile');
 Route::get('/addresses', Addresses::class)->name('addresses');
 Route::get('/orders', Orders::class)->name('orders');
 Route::get('/payment-method', PaymentMethod::class)->name('payment-method');
+Route::get('/shop', Shop::class)->name('shop');
+Route::get('/shop-details', Details::class)->name('shop-details');
 
 
 Route::middleware(['auth'])->group(function () {

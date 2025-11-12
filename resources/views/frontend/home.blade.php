@@ -15,7 +15,7 @@
 		<div class="row">
 
 			<!-- includes/Home/home-14/features4.blade.php -->
-			@include('frontend.components.features')
+            <livewire:frontend.components.features />
 
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 		<div class="row align-items-center rows-products">
 
 			<!-- includes/Home/home-14/products10.blade.php -->
-			@include('frontend.components.products')
+            <livewire:frontend.components.products />
 
 		</div>
 
@@ -62,8 +62,8 @@
 			<div class="col-lg-8 col-md-10 col-sm-12">
 				<div class="tags_explore text-center">
 					<h2 class="mb-0 text-white ft-bold">Big Sale Up To 70% Off</h2>
-					<p class="text-light fs-lg mb-4">Exclussive Offers For Limited Time</p><p>
-					<a href="#" class="btn btn-lg bg-white px-5 text-dark ft-medium">Explore Your Order</a>
+					<p class="text-light fs-lg mb-4">Exclusive Offers For Limited Time</p><p>
+					<a href="{{ route('orders') }}" class="btn btn-lg bg-white px-5 text-dark ft-medium">Explore Your Order</a>
 				</p></div>
 			</div>
 		</div>
@@ -134,7 +134,7 @@
 				<div class="ftr-content">
 
 					<!-- includes/Home/home-14/seller.blade.php -->
-					@include('frontend.components.seller')
+                    <livewire:frontend.components.seller />
 
 				</div>
 			</div>
@@ -144,7 +144,7 @@
 				<div class="ftr-content">
 
 					<!-- includes/Home/home-14/featured.blade.php -->
-					@include('frontend.components.featured')
+                    <livewire:frontend.components.featured />
 
 				</div>
 			</div>
@@ -154,7 +154,7 @@
 				<div class="ftr-content">
 
 					<!-- includes/Home/home-14/recent.blade.php -->
-					@include('frontend.components.recent')
+                    <livewire:frontend.components.recent />
 
 				</div>
 			</div>

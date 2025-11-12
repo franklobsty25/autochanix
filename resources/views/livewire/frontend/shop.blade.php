@@ -1,4 +1,5 @@
-<x-layouts.frontend :title="__('Shop')">
+<x-slot:title>Shop</x-slot>
+<div>
     <!-- Shop Style 1 -->
     <section class="bg-cover" style="background:url({{ asset('assets/img/banner-12.png') }}) no-repeat;">
         <div class="container">
@@ -23,7 +24,7 @@
                 </div>
 
                 <!-- includes/Shop/shops-style-1/filter.blade.php -->
-                <livewire:frontend.shop.components.filter />
+                <livewire:frontend.shop.components.filter/>
 
             </div>
 
@@ -40,7 +41,7 @@
             <div class="row align-items-center rows-products">
 
                 <!-- includes/Home/index/product.blade.php -->
-                <livewire:frontend.shop.components.products />
+                <livewire:frontend.shop.components.products/>
 
                 <!-- includes/Shop/shops-style-1/product6.blade.php -->
                 {{-- @include('includes.Shop.shops-style-1.product6') --}}
@@ -63,10 +64,10 @@
         <div class="container">
             <div class="row">
 
-                <livewire:frontend.components.features />
+                <livewire:frontend.components.features/>
 
             </div>
         </div>
     </section>
     <!-- Customer Features -->
-</x-layouts.frontend>
+</div>

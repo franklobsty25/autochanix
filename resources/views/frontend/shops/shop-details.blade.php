@@ -284,7 +284,7 @@
         <div class="row">
 
             <!-- includes/Home/index/features.blade.php -->
-			@include('frontend.components.features')
+			<livewire:frontend.components.features />
 
         </div>
     </div>

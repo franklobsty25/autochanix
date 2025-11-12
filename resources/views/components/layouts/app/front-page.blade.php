@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="author" content="Shreethemes" />
+    <meta name="author" content="Cyclux" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title ?? config('app.name') }}</title>
-    <link rel="icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/gif" sizes="18x18">
+    <link rel="icon" href="{{ asset('assets/img/logo.png') }}" type="image/gif" sizes="18x18">
 
     <!-- Custom CSS -->
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
@@ -27,24 +27,26 @@
 
         <!-- Main Content -->
         <div class="content">
-            @include('includes.navbar6')
+            <!-- includes.navbar6 -->
+            @include('frontend.components.navbar')
             {{ $slot }}
             <!-- includes/Home/index/quickview.blade.php -->
-            @include('includes.Home.index.quickview')
+            @include('frontend.components.quickview')
 
             <!-- includes/Home/index/log.blade.php -->
-            @include('includes.Home.index.log')
+            @include('frontend.components.login')
 
             <!-- includes/Home/index/search.blade.php -->
-            @include('includes.Home.index.search')
+            @include('frontend.components.search')
 
             <!-- includes/Home/index/wishlist.blade.php -->
-            @include('includes.Home.index.wishlist')
+            @include('frontend.components.wishlist')
 
             <!-- includes/Home/index/cart.blade.php -->
-            @include('includes.Home.index.cart')
+            @include('frontend.components.cart')
 
-            @include('includes.footer')
+            <!-- includes.footer -->
+            @include('frontend.components.footer')
         </div>
 
         <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>

@@ -156,7 +156,7 @@
                                 <tbody>
 
                                     <!-- includes/Product/shops-single-v1/information.blade.php -->
-					                @include('includes.Product.shop-single-v1.information')
+					                @include('frontend.shops.components.information')
 
                                 </tbody>
                             </table>
@@ -168,7 +168,7 @@
                         <div class="reviews_info">
 
                             <!-- includes/Product/shops-single-v1/reviews.blade.php -->
-					        @include('includes.Product.shop-single-v1.reviews')
+					        @include('frontend.shops.components.reviews')
 
                         </div>
 
@@ -268,7 +268,7 @@
                 <div class="slide_items">
 
                     <!-- includes/Home/home-5/deals.blade.php -->
-					@include('includes.Home.home-5.deals')
+					@include('frontend.components.deals')
 
                 </div>
             </div>
@@ -284,7 +284,7 @@
         <div class="row">
 
             <!-- includes/Home/index/features.blade.php -->
-			@include('includes.Home.index.features2')
+			@include('frontend.components.features')
 
         </div>
     </div>

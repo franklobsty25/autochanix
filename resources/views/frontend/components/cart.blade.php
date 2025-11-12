@@ -51,10 +51,10 @@
 
             <div class="cart_action px-3 py-3">
                 <div class="form-group mb-3">
-                    <button onclick="window.location.href='{{ url('/checkout') }}'" type="button" class="btn d-block full-width btn-dark">Checkout Now</button>
+                    <a href="{{ route('checkout') }}" type="button" class="btn d-block full-width btn-dark" wire:navigate>Checkout Now</a>
                 </div>
                 <div class="form-group">
-                    <button onclick="window.location.href='{{ url('/shopping-cart') }}'" class="btn d-block full-width btn-dark-light">Edit or View</button>
+                    <a href="{{ route('shopping-cart') }}" class="btn d-block full-width btn-dark-light" wire:navigate>Edit or View</a>
                 </div>
             </div>
 

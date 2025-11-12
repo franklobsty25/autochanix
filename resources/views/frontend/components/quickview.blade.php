@@ -14,7 +14,7 @@
                     <input type="hidden" id="product-id" value="" />
 
                     <div class="single_view_slide">
-                        <img id="product-image" src="{{ asset('assets/img/product/7.jpg') }}" class="img-fluid" alt="" />
+                        <img id="product-image" src="{{ asset('assets/img/product/1.jpg') }}" class="img-fluid" alt="" />
                     </div>
 
                     <div class="quick_view_capt">
@@ -22,7 +22,7 @@
 
                             <div class="prt_01 mb-1"><span id="product-tag" class="text-light bg-info rounded px-2 py-1">Auto parts</span></div>
                             <div class="prt_02 mb-2">
-                                <h2 class="ft-bold mb-1" id="product-title">Brake Pad Set</h2>
+                                <h2 class="ft-bold mb-1" id="product-title">Brake Pad Block</h2>
                                 <div class="text-left">
                                     <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
                                         <i class="fas fa-star filled"></i>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
 
-                            <div class="prt_03 mb-5">
+                            <div class="prt_03 mb-3">
                                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
                             </div>
 

@@ -105,7 +105,7 @@
 							<h2 class="mt-2 mb-2 ft-bold">Your Wishlist is empty!</h2>
 							<p class="text-muted fs-6">Your Wishlist is empty please go to the shop page and select your favourite items.</p>
 							<div class="position-relative text-center">
-								<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Shop Now</i></a>
+								<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Shop Now</a>
 							</div>
 						</div>
 					@endif

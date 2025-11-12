@@ -1,5 +1,17 @@
 <?php
 
+use App\Livewire\Dashboards\Addresses;
+use App\Livewire\Dashboards\Orders;
+use App\Livewire\Dashboards\PaymentMethod;
+use App\Livewire\Dashboards\Profile;
+use App\Livewire\Frontends\Checkout;
+use App\Livewire\Frontends\CompleteOrder;
+use App\Livewire\Frontends\ShoppingCart;
+use App\Livewire\Dashboards\Wishlist;
+use App\Livewire\Frontends\Supports\AboutUs;
+use App\Livewire\Frontends\Supports\Contact;
+use App\Livewire\Frontends\Supports\Faq;
+use App\Livewire\Frontends\Supports\PrivacyPolicy;
 use App\Livewire\Products\ProductCreate;
 use App\Livewire\Products\ProductEdit;
 use App\Livewire\Products\ProductIndex;
@@ -27,33 +39,8 @@ Route::get('/shop-details', function () {
     return view('frontend.shops.shop-details');
 })->name('shop-details');
 
-Route::get('/about-us', function () {
-    return view('frontend.supports.about-us');
-});
-Route::get('/contact', function () {
-    return view('frontend.supports.contact');
-});
-Route::get('/privacy', function () {
-    return view('frontend.supports.privacy');
-});
-Route::get('/faq', function () {
-    return view('frontend.supports.faq');
-});
-
-Route::get('/checkout', function () {
-    return view('frontend.components.checkout');
-});
-
-Route::get('/complete-order', function () {
-    return view('frontend.components.complete-order');
-});
-
-Route::get('/my-orders', function () {
-    return view('frontend.components.my-orders');
-});
-
 Route::get('/docs', function () {
-    return view('addresses');
+    return view('my-orders');
 });
 
 Route::view('dashboard', 'dashboard')
@@ -63,6 +50,24 @@ Route::view('dashboard', 'dashboard')
 Route::view('sales-report', 'sales-report')
     ->middleware(['auth', 'verified'])
     ->name('sales-report');
+
+/**
+ *
+ * Livewire Block
+ */
+Route::get('/about-us', AboutUs::class)->name('about-us');
+Route::get('/contact', Contact::class)->name('contact');
+Route::get('/faq', Faq::class)->name('faq');
+Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy-policy');
+Route::get('/shopping-cart', ShoppingCart::class)->name('shopping-cart');
+Route::get('/checkout', Checkout::class)->name('checkout');
+Route::get('/complete-order', CompleteOrder::class)->name('complete-order');
+Route::get('/wishlist', Wishlist::class)->name('wishlist');
+Route::get('/profile', Profile::class)->name('profile');
+Route::get('/addresses', Addresses::class)->name('addresses');
+Route::get('/orders', Orders::class)->name('orders');
+Route::get('/payment-method', PaymentMethod::class)->name('payment-method');
+
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');

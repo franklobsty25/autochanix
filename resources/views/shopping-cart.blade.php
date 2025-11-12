@@ -1,4 +1,4 @@
-<!-- resources/views/shoping-cart.blade.php -->
+<!-- resources/views/shopping-cart.blade.php -->
 @extends('layouts.main')
 
 @section('title', 'Shoping-Cart Page')
@@ -149,7 +149,7 @@
 					<h2 class="mt-2 mb-2 ft-bold">Your Cart is empty!</h2>
 					<p class="text-muted fs-6">Your Cart is empty please go to the shop page and Buy your favourite items.</p>
 					<div class="position-relative text-center">
-						<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Shop Now</i></a>
+						<a href="{{ url('/shops-style-1') }}" class="btn stretched-links borders">Shop Now</a>
 					</div>
 				</div>
 			@endif

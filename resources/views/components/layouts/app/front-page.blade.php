@@ -69,7 +69,8 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/popup.js') }}"></script>
     <script src="{{ asset('assets/js/contact.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+{{--    <script src="{{ asset('assets/js/main.js') }}"></script>--}}
+    <script src="{{ asset('assets/js/processing.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <!-- This page plugins -->

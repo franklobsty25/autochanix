@@ -6,6 +6,7 @@ use App\Livewire\Dashboard\PaymentMethod;
 use App\Livewire\Dashboard\Profile;
 use App\Livewire\Frontend\Checkout;
 use App\Livewire\Frontend\CompleteOrder;
+use App\Livewire\Frontend\Home;
 use App\Livewire\Frontend\Shop;
 use App\Livewire\Frontend\Shop\Components\Details;
 use App\Livewire\Frontend\ShoppingCart;
@@ -29,19 +30,11 @@ use App\Livewire\Users\UserShow;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Route::get('/', function () {
-    return view('frontend.home');
-})->name('home');
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
     Route::view('sales-report', 'sales-report')->name('sales-report');
 });
 
-//Route::view('dashboard', 'dashboard')
-//    ->middleware(['auth', 'verified'])
-//    ->name('dashboard');
-//
 //Route::view('sales-report', 'sales-report')
 //    ->middleware(['auth', 'verified'])
 //    ->name('sales-report');
@@ -49,6 +42,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 /**
  * Livewire Block
  */
+Route::get('/', Home::class)->name('home');
 Route::get('/about-us', AboutUs::class)->name('about-us');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/faq', Faq::class)->name('faq');

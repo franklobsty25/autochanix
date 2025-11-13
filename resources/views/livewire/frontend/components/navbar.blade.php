@@ -6,7 +6,7 @@
                     <div class="headd-sty-wrap d-flex align-items-center justify-content-between py-3">
                         <div class="headd-sty-left d-flex align-items-center">
                             <div class="headd-sty-01">
-                                <a class="nav-brand py-0" href="{{ url('/') }}">
+                                <a class="nav-brand py-0" href="{{ route('home') }}" wire:navigate>
                                     <img src="{{ asset('assets/img/logo.png') }}" class="logo" alt="" />
                                 </a>
                             </div>

@@ -1,6 +1,13 @@
 <?php
 
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
+use App\Models\User;
+use App\RoleEnum;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -33,3 +40,49 @@ Route::middleware('auth')->group(function () {
 
 Route::post('logout', App\Livewire\Actions\Logout::class)
     ->name('logout');
+
+Route::post('register', function (RegisterRequest $request) {
+    $validated = $request->validated();
+
+    try {
+        $user = User::create($validated);
+        $user->assignRole(RoleEnum::User->value);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'User registered successfully',
+        ]);
+    } catch (\Exception $e) {
+        Log::error($e->getMessage());
+        return response()->json([
+            'success' => false,
+            'message' => $e->getMessage(),
+            ],
+            500,
+        );
+    }
+});
+
+Route::post('login', function (LoginRequest $request) {
+
+    Log::info('Login data:', $request->all());
+
+    $validated = $request->validated();
+
+    $isValid = Auth::attempt($validated);
+
+    if ($isValid) {
+        return response()->json([
+            'success' => true,
+            'message' => 'You are now logged in.',
+            ]
+        );
+    } else {
+        return response()->json([
+            'success' => false,
+            'message' => 'Invalid credentials.',
+            ]
+        );
+    }
+
+});

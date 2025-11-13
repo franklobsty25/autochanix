@@ -19,7 +19,7 @@ class RoleSeeder extends Seeder
         $roles = array_column(RoleEnum::cases(), 'value');
 
         foreach ($roles as $role) {
-            $createRole = Role::create(['name' => $role]);
+            $createRole = Role::create(['name' => $role, 'guard_name' => 'web']);
 
             $createRole->syncPermissions($this->getPermission($role));
 
@@ -48,6 +48,15 @@ class RoleSeeder extends Seeder
                 ->orWhere('name', '=', 'products.edit')
                 ->orWhere('name', '=', 'products.delete')
                 ->get(),
+            RoleEnum::SuperAdmin->value => Permission::where('name', '=', 'roles.index')
+                ->orWhere('name', '=', 'roles.index')
+                ->orWhere('name', '=', 'roles.create')
+                ->orWhere('name', '=', 'products.index')
+                ->orWhere('name', '=', 'products.create')
+                ->orWhere('name', '=', 'products.edit')
+                ->orWhere('name', '=', 'products.delete')
+                ->get(),
+            default => collect(),
         };
     }
 }

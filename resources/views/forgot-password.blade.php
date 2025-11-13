@@ -6,7 +6,7 @@
 @section('content')
 
 @include('includes.navbar2')
-			
+
 <!-- Top Breadcrubms -->
 <div class="gray py-3">
 	<div class="container">
@@ -29,14 +29,14 @@
 <section class="middle">
 	<div class="container">
 		<div class="row align-items-start justify-content-center">
-		
+
 			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-				<form class="border p-3 rounded">				
+				<form class="border p-3 rounded">
 					<div class="form-group mb-3">
 						<label class="mb-2">User Name *</label>
 						<input type="text" class="form-control" placeholder="Username*">
 					</div>
-					
+
 					<div class="form-group">
 						<button type="submit" class="btn btn-md full-width bg-dark text-light fs-md ft-medium">Reset Password</button>
 					</div>
@@ -45,7 +45,7 @@
 					</div>
 				</form>
 			</div>
-			
+
 		</div>
 	</div>
 </section>
@@ -55,10 +55,10 @@
 <section class="px-0 py-3 br-top">
 	<div class="container">
 		<div class="row">
-			
+
 			<!-- includes/blog-detail/features.blade.php -->
 			@include('includes.blog-detail.features')
-			
+
 		</div>
 	</div>
 </section>
@@ -80,5 +80,5 @@
 @include('includes.Home.index.cart')
 
 @include('includes.footer')
-			
+
 @endsection

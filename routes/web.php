@@ -33,13 +33,18 @@ Route::get('/', function () {
     return view('frontend.home');
 })->name('home');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::view('sales-report', 'sales-report')->name('sales-report');
+});
 
-Route::view('sales-report', 'sales-report')
-    ->middleware(['auth', 'verified'])
-    ->name('sales-report');
+//Route::view('dashboard', 'dashboard')
+//    ->middleware(['auth', 'verified'])
+//    ->name('dashboard');
+//
+//Route::view('sales-report', 'sales-report')
+//    ->middleware(['auth', 'verified'])
+//    ->name('sales-report');
 
 /**
  * Livewire Block

@@ -2,25 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class OrderItem extends Model
+class Media extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductCategoryFactory> */
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'order_id',
+        'user_id',
         'product_id',
-        'quantity',
+        'image',
     ];
 
-    public function order(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsTo(User::class);
     }
 
     public function product(): BelongsTo

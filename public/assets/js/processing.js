@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rememberMeInput = document.getElementById('dd');
     const spinner = document.getElementById('login-spinner');
     const loginModal = document.getElementById('login');
-    const modal = new bootstrap.Modal(loginModal);
-
-    spinner.classList.add('d-none');
+    const modal = bootstrap.Modal.getOrCreateInstance(loginModal);
 
     loginForm.addEventListener('submit', async function (e) {
         e.preventDefault();
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await res.json();
 
             if (data.success) {
-                modal.hide();
                 Toastify({
                     text: data.message || `Login successful`,
                     duration: 3000,
@@ -70,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 stopOnFocus: true,
             }).showToast();
         } finally {
+            modal.hide();
+            loginForm.reset();
             spinner.classList.add('d-none');
             loginBtn.removeAttribute('disabled');
         }
@@ -86,8 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const registerSpinner = document.getElementById('register-spinner');
     const loginModal = document.getElementById('login');
     const modal = new bootstrap.Modal(loginModal);
-
-    registerSpinner.classList.add('d-none');
 
     registerForm.addEventListener('submit', async function (e) {
         e.preventDefault();
@@ -126,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await res.json();
 
             if (data.success) {
-                modal.hide();
                 Toastify({
                     text: data.message || `Registration successful`,
                     duration: 3000,
@@ -139,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 throw new Error(data.message || 'Something went wrong, Try again!');
             }
         } catch (err) {
-            console.log('Error: ', err);
             Toastify({
                 text: err.message || `Server error occurred!`,
                 duration: 3000,
@@ -149,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 stopOnFocus: true,
             }).showToast();
         } finally {
+            modal.hide();
+            registerForm.reset();
             registerSpinner.classList.add('d-none');
             registerBtn.removeAttribute('disabled');
         }

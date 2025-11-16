@@ -70,7 +70,7 @@
                         <div class="form-group mb-3">
                             <button type="submit" class="btn btn-md full-width bg-dark text-light fs-md ft-medium" id="register-btn">
                                 Register&nbsp;&nbsp;
-                                <div class="spinner-border spinner-border-sm" role="status" id="register-spinner">
+                                <div class="spinner-border spinner-border-sm d-inline-block d-none" role="status" id="register-spinner">
                                     <span class="sr-only">Loading...</span>
                                 </div>
                             </button>
@@ -113,7 +113,7 @@
                         <div class="form-group mb-3">
                             <button type="submit" class="btn btn-md full-width bg-dark text-light fs-md ft-medium" id="login-btn">
                                 Login&nbsp;&nbsp;
-                                <div class="spinner-border spinner-border-sm" role="status" id="login-spinner">
+                                <div class="spinner-border spinner-border-sm d-inline-block d-none" role="status" id="login-spinner">
                                     <span class="sr-only">Loading...</span>
                                 </div>
                             </button>

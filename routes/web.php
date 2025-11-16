@@ -39,6 +39,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 //    ->middleware(['auth', 'verified'])
 //    ->name('sales-report');
 
+
 /**
  * Livewire Block
  */

@@ -53,7 +53,7 @@ $slides = [
                                 <span class="{{ $item['class2'] }}">{{ $item['desc'] }}</span>
                             </div>
 
-                            <a href="#" class="{{ $item['style'] }}">{{ $item['btn'] }}<i class="lni lni-arrow-right ms-2"></i></a>
+                            <a href="{{ route('shop') }}" class="{{ $item['style'] }}">{{ $item['btn'] }}<i class="lni lni-arrow-right ms-2"></i></a>
                         </div>
 
                     </div>

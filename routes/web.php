@@ -74,8 +74,8 @@ Route::middleware(['auth'])->group(function () {
      * */
     Route::get('products', ProductIndex::class)->name('products.index')->middleware('permission:products.index|products.create|products.edit|products.delete');
     Route::get('products/create', ProductCreate::class)->name('products.create')->middleware('permission:products.create');
-    Route::get('products/{product}/edit', ProductEdit::class)->name('products.edit')->middleware('permission:products.edit');
-    Route::get('products/{product}/show', ProductShow::class)->name('products.show')->middleware('permission:products.show');
+    Route::get('products/{productId}/edit', ProductEdit::class)->name('products.edit')->middleware('permission:products.edit');
+    Route::get('products/{productId}/show', ProductShow::class)->name('products.show')->middleware('permission:products.show');
 
     /*
      * Role Management

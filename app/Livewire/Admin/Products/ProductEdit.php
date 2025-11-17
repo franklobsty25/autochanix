@@ -5,16 +5,20 @@ namespace App\Livewire\Admin\Products;
 use App\Livewire\Forms\ProductForm;
 use App\Models\Category;
 use App\Models\Product;
+use App\Util;
 use Illuminate\View\View;
 use Livewire\Component;
 
 class ProductEdit extends Component
 {
+    use Util;
+
     public $categories;
     public ProductForm $form;
 
-    public function mount(Product $product): void
+    public function mount(string $productId): void
     {
+        $product = Product::firstWhere('id', $this->decrypt($productId));
         $this->form->setProduct($product);
         $this->categories = Category::latest()->get();
     }

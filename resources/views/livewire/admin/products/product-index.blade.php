@@ -59,13 +59,13 @@
                         <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->stock_quantity }}</td>
                         <td class="px-6 py-2">
                             @can('products.index')
-                            <a wire:navigate href="{{ route('products.show', $product->id) }}" class="mr-1 cursor-pointer px-3 py-2 text-xs font-medium text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                            <a wire:navigate href="{{ route('products.show', \App\Livewire\Admin\Products\ProductCreate::encrypt($product->id)) }}" class="mr-1 cursor-pointer px-3 py-2 text-xs font-medium text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                 Show
                             </a>
                             @endcan
 
                             @can('products.edit')
-                            <a wire:navigate href="{{ route('products.edit', $product->id) }}" class="cursor-pointer px-3 py-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a wire:navigate href="{{ route('products.edit', \App\Livewire\Admin\Products\ProductCreate::encrypt($product->id)) }}" class="cursor-pointer px-3 py-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Edit
                             </a>
                             @endcan

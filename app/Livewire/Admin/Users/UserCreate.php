@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Users;
+namespace App\Livewire\Admin\Users;
 
 use App\Models\User;
 use Illuminate\View\View;
@@ -19,7 +19,7 @@ class UserCreate extends Component
 
     public function render(): View
     {
-        return view('livewire.users.user-create');
+        return view('livewire.admin.users.user-create');
     }
 
     public function createUser()

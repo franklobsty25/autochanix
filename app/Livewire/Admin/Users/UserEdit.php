@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Users;
+namespace App\Livewire\Admin\Users;
 
 use App\Models\User;
 use Illuminate\View\View;
@@ -23,7 +23,7 @@ class UserEdit extends Component
 
     public function render(): View
     {
-        return view('livewire.users.user-edit');
+        return view('livewire.admin.users.user-edit');
     }
 
     public function editUser()

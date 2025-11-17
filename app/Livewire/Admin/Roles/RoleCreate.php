@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Roles;
+namespace App\Livewire\Admin\Roles;
 
 use Illuminate\View\View;
 use Livewire\Component;
@@ -20,7 +20,7 @@ class RoleCreate extends Component
 
     public function render(): View
     {
-        return view('livewire.roles.role-create');
+        return view('livewire.admin.roles.role-create');
     }
 
     public function createRole()

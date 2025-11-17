@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Users;
+namespace App\Livewire\Admin\Users;
 
 use App\Models\User;
 use Illuminate\View\View;
@@ -10,7 +10,7 @@ class UserIndex extends Component
 {
     public function render(): View
     {
-        return view('livewire.users.user-index', [
+        return view('livewire.admin.users.user-index', [
             'users' => User::latest()->get(),
         ]);
     }

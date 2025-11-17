@@ -18,8 +18,6 @@ class PermissionSeeder extends Seeder
 
         foreach ($permissions as $permission) {
             Permission::firstOrCreate(['name' => $permission]);
-
-            unset($permission);
         }
     }
 }

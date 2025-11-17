@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Users;
+namespace App\Livewire\Admin\Users;
 
 use App\Models\User;
 use Illuminate\View\View;
@@ -17,6 +17,6 @@ class UserShow extends Component
 
     public function render(): View
     {
-        return view('livewire.users.user-show');
+        return view('livewire.admin.users.user-show');
     }
 }

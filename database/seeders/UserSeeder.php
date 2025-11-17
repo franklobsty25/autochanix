@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
         $this->user();
         $this->manager();
         $this->teamLead();
+        $this->superAdmin();
     }
 
     protected function admin(): void
@@ -62,5 +63,16 @@ class UserSeeder extends Seeder
         ]);
 
         $teamLead->assignRole(RoleEnum::TeamLead->value);
+    }
+
+    protected function superadmin(): void
+    {
+        $superadmin = User::factory()->create([
+            'name' => RoleEnum::SuperAdmin->value,
+            'email' => 'superadmin@example.com',
+            'password' => bcrypt('password'),
+        ]);
+
+        $superadmin->assignRole(RoleEnum::SuperAdmin->value);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Roles;
+namespace App\Livewire\Admin\Roles;
 
 use Illuminate\View\View;
 use Livewire\Component;
@@ -23,7 +23,7 @@ class RoleEdit extends Component
 
     public function render(): View
     {
-        return view('livewire.roles.role-edit');
+        return view('livewire.admin.roles.role-edit');
     }
 
     public function editRole()

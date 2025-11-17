@@ -1,43 +1,41 @@
 <?php
 
+use App\Livewire\Admin\Dashboard;
+use App\Livewire\Admin\Products\ProductCreate;
+use App\Livewire\Admin\Products\ProductEdit;
+use App\Livewire\Admin\Products\ProductIndex;
+use App\Livewire\Admin\Products\ProductShow;
+use App\Livewire\Admin\Roles\RoleCreate;
+use App\Livewire\Admin\Roles\RoleEdit;
+use App\Livewire\Admin\Roles\RoleIndex;
+use App\Livewire\Admin\Roles\RoleShow;
+use App\Livewire\Admin\Users\UserCreate;
+use App\Livewire\Admin\Users\UserEdit;
+use App\Livewire\Admin\Users\UserIndex;
+use App\Livewire\Admin\Users\UserShow;
 use App\Livewire\Dashboard\Addresses;
 use App\Livewire\Dashboard\Orders;
 use App\Livewire\Dashboard\PaymentMethod;
 use App\Livewire\Dashboard\Profile;
+use App\Livewire\Dashboard\Wishlist;
 use App\Livewire\Frontend\Checkout;
 use App\Livewire\Frontend\CompleteOrder;
 use App\Livewire\Frontend\Home;
 use App\Livewire\Frontend\Shop;
 use App\Livewire\Frontend\Shop\Components\Details;
 use App\Livewire\Frontend\ShoppingCart;
-use App\Livewire\Dashboard\Wishlist;
 use App\Livewire\Frontend\Supports\AboutUs;
 use App\Livewire\Frontend\Supports\Contact;
 use App\Livewire\Frontend\Supports\Faq;
 use App\Livewire\Frontend\Supports\PrivacyPolicy;
-use App\Livewire\Products\ProductCreate;
-use App\Livewire\Products\ProductEdit;
-use App\Livewire\Products\ProductIndex;
-use App\Livewire\Products\ProductShow;
-use App\Livewire\Roles\RoleCreate;
-use App\Livewire\Roles\RoleEdit;
-use App\Livewire\Roles\RoleIndex;
-use App\Livewire\Roles\RoleShow;
-use App\Livewire\Users\UserCreate;
-use App\Livewire\Users\UserEdit;
-use App\Livewire\Users\UserIndex;
-use App\Livewire\Users\UserShow;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
+//    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::view('sales-report', 'sales-report')->name('sales-report');
 });
-
-//Route::view('sales-report', 'sales-report')
-//    ->middleware(['auth', 'verified'])
-//    ->name('sales-report');
 
 
 /**

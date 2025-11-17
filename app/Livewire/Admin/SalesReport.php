@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Admin;
 
 use App\Models\Order;
 use Carbon\Carbon;
@@ -25,6 +25,6 @@ class SalesReport extends Component
 
     public function render()
     {
-        return view('livewire.sales-report');
+        return view('livewire.admin.sales-report');
     }
 }

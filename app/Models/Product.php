@@ -19,6 +19,7 @@ class Product extends Model
         'reference',
         'price',
         'promotion_price',
+        'images',
         'discount',
         'tax',
         'state',

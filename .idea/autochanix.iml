@@ -137,6 +137,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laradumps/laradumps" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laradumps/laradumps-core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/backtrace" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

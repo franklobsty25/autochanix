@@ -19,9 +19,10 @@ class ProductSeeder extends Seeder
         $products = [
             [
                 'name' => 'Product 1',
-                'description' => 'Detail of Product 1',
+                'description' => 'Description of Product 1',
                 'reference' => Str::uuid()->toString(),
                 'price' => 10.00,
+                'images' => 'assets/img/shop/6.png|assets/img/shop/7.png',
                 'category_id' => Category::all()[0]->id,
                 'user_id' => User::firstWhere('email', 'admin@example.com')->id,
             ],

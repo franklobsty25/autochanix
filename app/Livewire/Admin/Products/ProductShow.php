@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Products;
+namespace App\Livewire\Admin\Products;
 
 use App\Models\Product;
 use Illuminate\View\View;
@@ -17,6 +17,6 @@ class ProductShow extends Component
 
     public function render(): View
     {
-        return view('livewire.products.product-show');
+        return view('livewire.admin.products.product-show');
     }
 }

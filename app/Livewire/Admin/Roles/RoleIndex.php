@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Roles;
+namespace App\Livewire\Admin\Roles;
 
 use Illuminate\View\View;
 use Livewire\Component;
@@ -10,7 +10,7 @@ class RoleIndex extends Component
 {
     public function render(): View
     {
-        return view('livewire.roles.role-index', [
+        return view('livewire.admin.roles.role-index', [
             'roles' => Role::with('permissions')->latest()->get(),
         ]);
     }

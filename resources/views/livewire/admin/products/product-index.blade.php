@@ -1,7 +1,7 @@
 <div>
     <div class="relative mb-6 w-full">
         <flux:heading size="xl" level="1">{{ __('Products') }}</flux:heading>
-        <flux:subheading size="lg" class="mb-6">{{ __('Manage your all your products') }}</flux:subheading>
+{{--        <flux:subheading size="lg" class="mb-6">{{ __('Manage your all your products') }}</flux:subheading>--}}
         <flux:separator variant="subtle" />
     </div>
 
@@ -15,28 +15,48 @@
             </div>
         @endsession
 
-        @can('products.create')
-        <a wire:navigate href="{{ route('products.create') }}" class="cursor-pointer px-3 py-2 text-xs font-medium text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-            Create Products
-        </a>
-        @endcan
+{{--        @can('products.create')--}}
+{{--        <a wire:navigate href="{{ route('products.create') }}" class="cursor-pointer px-3 py-2 text-xs font-medium text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">--}}
+{{--            Create Products--}}
+{{--        </a>--}}
+{{--        @endcan--}}
 
         <div class="overflow-x-auto mt-4">
+            @can('products.create')
+                <a wire:navigate href="{{ route('products.create') }}" class="cursor-pointer px-3 py-2 text-xs font-medium text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 float-end mb-3">
+                    Add Product
+                </a>
+            @endcan
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">ID</th>
                     <th scope="col" class="px-6 py-3">Name</th>
-                    <th scope="col" class="px-6 py-3">Detail</th>
+                    <th scope="col" class="px-6 py-3">Description</th>
+                    <th scope="col" class="px-6 py-3">Price</th>
+                    <th scope="col" class="px-6 py-3">Promotion Price</th>
+                    <th scope="col" class="px-6 py-3">Category</th>
+                    <th scope="col" class="px-6 py-3">State</th>
+                    <th scope="col" class="px-6 py-3">Discount</th>
+                    <th scope="col" class="px-6 py-3">Tax</th>
+                    <th scope="col" class="px-6 py-3">Stock Quantity</th>
                     <th scope="col" class="px-6 py-3 w-80">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
+
                 @foreach ($products as $product)
                     <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
                         <td class="px-6 py-2 font-medium text-gray-900 dark:text-white">{{ $loop->iteration }}</td>
-                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->name }}</td>
-                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->detail }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ ucfirst($product->name) }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ ucfirst($product->description) }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->price }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->promotion_price }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ ucfirst($product->category->name) }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ ucfirst($product->state) }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->discount }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->tax }}</td>
+                        <td class="px-6 py-2 text-gray-600 dark:text-gray-300">{{ $product->stock_quantity }}</td>
                         <td class="px-6 py-2">
                             @can('products.index')
                             <a wire:navigate href="{{ route('products.show', $product->id) }}" class="mr-1 cursor-pointer px-3 py-2 text-xs font-medium text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">

@@ -20,6 +20,9 @@ return new class extends Migration
             $table->uuid('reference')->unique();
             $table->decimal('price', 10, 2);
             $table->decimal('promotion_price', 10, 2)->default(0);
+            $table->text('images');
+            $table->integer('discount')->default(0);
+            $table->integer('tax')->default(0);
             $table->integer('stock_quantity')->default(0);
             $table->integer('sold_quantity')->default(0);
             $table->enum('state', array_column(StateEnum::cases(), 'value'))

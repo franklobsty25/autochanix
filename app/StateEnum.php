@@ -6,6 +6,6 @@ enum StateEnum: string
 {
     case New = 'new';
     case Old = 'old';
-    case Sold_out = 'sold_out';
+    case Sold_out = 'sold Out';
     case Sale = 'sale';
 }

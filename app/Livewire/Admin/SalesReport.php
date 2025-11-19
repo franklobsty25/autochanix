@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin;
 
+use App\CurrencyEnum;
 use App\Models\Order;
 use Carbon\Carbon;
 use Livewire\Component;
@@ -13,14 +14,23 @@ class SalesReport extends Component
 
     public function mount()
     {
-        $this->totalSales = Order::whereMonth('created_at', Carbon::now()->month)
-            ->sum('total_price');
+        $total = Order::whereMonth('created_at', Carbon::now()->month)
+            ->sum('total_amount');
 
-        $this->salesByMonth = Order::selectRaw('sum(total_price) as total, MONTH(created_at) as month')
+        $this->totalSales = $this->getFormattedValue($total);
+
+        $this->salesByMonth = Order::selectRaw('sum(total_amount) as total, MONTH(created_at) as month')
             ->where('created_at', '>=', Carbon::now()->subYear())
             ->groupBy('month')
             ->orderBy('month', 'asc')
             ->get();
+
+        ds($this->salesByMonth);
+    }
+
+    private function getFormattedValue($value)
+    {
+        return CurrencyEnum::GHS->symbol() . number_format($value, 2);
     }
 
     public function render()

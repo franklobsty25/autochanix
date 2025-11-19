@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\CurrencyEnum;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -47,5 +48,10 @@ class Product extends Model
     public function media(): HasMany
     {
         return $this->hasMany(Media::class);
+    }
+
+    public function getFormattedPriceAttribute()
+    {
+        return CurrencyEnum::GHS->symbol() . number_format($this->price, 2);
     }
 }

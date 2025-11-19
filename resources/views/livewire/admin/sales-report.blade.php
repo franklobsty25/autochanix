@@ -3,7 +3,7 @@
         <h2 class="text-lg font-semibold text-gray-800">Sales Report</h2>
         <div class="mt-4">
             <p class="text-gray-600">Total sales for this month:</p>
-            <p class="text-2xl font-bold text-gray-900">${{ number_format($totalSales, 2) }}</p>
+            <p class="text-2xl font-bold text-gray-900">{{ $totalSales }}</p>
         </div>
         <div class="mt-8">
             <canvas id="salesChart"></canvas>

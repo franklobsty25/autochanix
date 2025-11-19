@@ -14,13 +14,31 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item wire:navigate icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
-                    @canany(['users.index', 'users.create', 'users.edit', 'users.show', 'users.delete'])
+                    @canany([
+                        \App\PermissionEnum::UsersIndex->value,
+                        \App\PermissionEnum::UsersCreate->value,
+                        \App\PermissionEnum::UsersEdit->value,
+                        \App\PermissionEnum::UsersShow->value,
+                        \App\PermissionEnum::UsersDelete->value,
+                    ])
                     <flux:navlist.item wire:navigate icon="users" :href="route('users.index')" :current="request()->routeIs('users.index')" wire:navigate>{{ __('Users') }}</flux:navlist.item>
                     @endcanany
-                    @canany(['roles.index', 'roles.create', 'roles.edit', 'roles.show', 'roles.delete'])
+                    @canany([
+                        \App\PermissionEnum::RolesIndex->value,
+                        \App\PermissionEnum::RolesCreate->value,
+                        \App\PermissionEnum::RolesEdit->value,
+                        \App\PermissionEnum::RolesShow->value,
+                        \App\PermissionEnum::RolesDelete->value,
+                    ])
                     <flux:navlist.item wire:navigate icon="link-slash" :href="route('roles.index')" :current="request()->routeIs('roles.index')" wire:navigate>{{ __('Roles') }}</flux:navlist.item>
                     @endcanany
-                    @canany(['products.index', 'products.create', 'products.edit', 'products.show', 'products.delete'])
+                    @canany([
+                        \App\PermissionEnum::ProductsIndex->value,
+                        \App\PermissionEnum::ProductsCreate->value,
+                        \App\PermissionEnum::ProductsEdit->value,
+                        \App\PermissionEnum::ProductsShow->value,
+                        \App\PermissionEnum::ProductsDelete->value,
+                    ])
                     <flux:navlist.item wire:navigate icon="list-bullet" :href="route('products.index')" :current="request()->routeIs('products.index')" wire:navigate>{{ __('Products') }}</flux:navlist.item>
                     @endcanany
                     @can('sales-report.view')

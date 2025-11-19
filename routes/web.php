@@ -9,6 +9,7 @@ use App\Livewire\Admin\Roles\RoleCreate;
 use App\Livewire\Admin\Roles\RoleEdit;
 use App\Livewire\Admin\Roles\RoleIndex;
 use App\Livewire\Admin\Roles\RoleShow;
+use App\Livewire\Admin\SalesReport;
 use App\Livewire\Admin\Users\UserCreate;
 use App\Livewire\Admin\Users\UserEdit;
 use App\Livewire\Admin\Users\UserIndex;
@@ -32,9 +33,8 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 Route::middleware(['auth', 'verified'])->group(function () {
-//    Route::view('dashboard', 'dashboard')->name('dashboard');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
-    Route::view('sales-report', 'sales-report')->name('sales-report');
+    Route::get('sales-report', SalesReport::class)->name('sales-report');
 });
 
 
@@ -88,6 +88,7 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+
 });
 
 require __DIR__.'/auth.php';

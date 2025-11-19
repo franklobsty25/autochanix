@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\CurrencyEnum;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -23,5 +24,10 @@ class Order extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function getFormattedAmountAttribute()
+    {
+        return CurrencyEnum::GHS->symbol() . number_format($this->total_amount, 2);
     }
 }

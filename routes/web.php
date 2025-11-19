@@ -85,9 +85,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('roles/{role}/edit', RoleEdit::class)->name('roles.edit')->middleware('permission:roles.edit');
     Route::get('roles/{role}/show', RoleShow::class)->name('roles.show')->middleware('permission:roles.show');
 
-    Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
-    Volt::route('settings/password', 'settings.password')->name('settings.password');
-    Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+    Volt::route('settings/profile', 'admin.settings.profile')->name('settings.profile');
+    Volt::route('settings/password', 'admin.settings.password')->name('settings.password');
+    Volt::route('settings/appearance', 'admin.settings.appearance')->name('settings.appearance');
 
 });
 

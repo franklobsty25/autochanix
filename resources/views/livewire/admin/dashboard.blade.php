@@ -43,7 +43,7 @@
                     </h2>
                 </div>
         </div>
-
+        <livewire:admin.components.dashboard-chart />
         <livewire:admin.components.dashboard-list />
     </div>
 </div>

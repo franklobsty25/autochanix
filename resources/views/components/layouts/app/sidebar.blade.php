@@ -158,5 +158,13 @@
         {{ $slot }}
 
         @fluxScripts
+        @isset($scripts)
+            {{ $scripts }}
+        @endisset
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                console.log('This is for dashboard chart')
+            });
+        </script>
     </body>
 </html>
